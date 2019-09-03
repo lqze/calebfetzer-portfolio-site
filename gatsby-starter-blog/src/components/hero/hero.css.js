@@ -25,7 +25,6 @@ export const LeftHalf = styled.div`
 
 
 export const RightHalf = styled.div`
-  background: gray;
   grid-column: 2;
   
   @media screen and (max-width: 1200px) {

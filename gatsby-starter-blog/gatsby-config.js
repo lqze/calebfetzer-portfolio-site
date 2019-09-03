@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Caleb Fetzer - Developer`,
     author: `Caleb Fetzer`,
+    authorBio: `Freelance Web Developer living in Perth, Western Australia`,
     description: `My website`,
     siteUrl: `https://calebfetzer.me`,
   },
@@ -58,12 +59,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
       },
     },
     `gatsby-plugin-offline`,

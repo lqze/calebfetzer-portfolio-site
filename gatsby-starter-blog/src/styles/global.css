@@ -1,0 +1,36 @@
+html {
+  font-size: 10px;
+}
+
+html, body {
+  /* height: 100%; */
+  margin: 0 auto;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  font-size: 2rem;
+}
+article {
+  padding-left: 20%;
+  padding-right: 20%;
+  @media screen (max-width: 764px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+a {
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+  transition: ease-in-out 0.2s;
+}
+
+a:hover {
+  color: rgb(55, 133, 228);
+  transition: ease-in-out 0.2s;
+}

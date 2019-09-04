@@ -49,7 +49,7 @@ const Bio = () => {
       />
       <p>
         Written by <strong>{author}</strong>.
-        {authorBio}
+        {' ' + authorBio}
         {` `}
       </p>
     </div>

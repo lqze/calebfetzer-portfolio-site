@@ -2,9 +2,18 @@ module.exports = {
   siteMetadata: {
     title: `Caleb Fetzer - Developer`,
     author: `Caleb Fetzer`,
-    authorBio: `Freelance Web Developer living in Perth, Western Australia`,
-    description: `My website`,
+    authorBio: `A freelance Web Developer living in Perth, Western Australia`,
+    description: `A personal portfolio and blog showcasing work done by me, Caleb Fetzer, 
+        including tutorials involving technologies such as
+        Express.js, Node.js, MongoDB, NoSQL. I also write about office culture, business practice
+        and offer consulting to small businesses.`,
     siteUrl: `https://calebfetzer.me`,
+    navMenu: [
+      `about`,
+      `work`,
+      `contact`,
+      `blog`,
+    ],
   },
   plugins: [
     {

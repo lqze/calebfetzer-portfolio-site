@@ -7,7 +7,7 @@ import Hero from "../components/hero/hero"
 import SEO from "../components/seo"
 import Header from '../components/header/header'
 
-class BlogIndex extends React.Component {
+class Index extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -18,7 +18,6 @@ class BlogIndex extends React.Component {
           <Hero>{this.props.location}
             <Header location={this.props.location} title={siteTitle} />
           </Hero>
-          
           <SEO title="All posts" />
           <Bio />
           {posts.map(({ node }) => {
@@ -48,7 +47,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query {

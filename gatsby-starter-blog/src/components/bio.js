@@ -7,18 +7,10 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author
@@ -30,30 +22,14 @@ const Bio = () => {
 
   const { author, authorBio } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`      
-      }}
-    >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
+    <div style={{ display: `flex` }}>
       <p>
         Written by <strong>{author}</strong>.
+        {/* Only edit authorBio in siteMetadata to prevent issues with formatting */}
         {' ' + authorBio}
-        {` `}
       </p>
     </div>
   )
 }
 
-export default Bio
+export default Bio;

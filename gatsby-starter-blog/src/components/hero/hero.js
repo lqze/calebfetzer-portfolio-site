@@ -1,7 +1,7 @@
 import React from "react"
 
 
-import { Container, Title, BgImage, LeftHalf, RightHalf, Copy } from './hero.css'
+import { Container, Title, BgImage, LeftHalf, RightHalf } from './hero.css'
 import { graphql, StaticQuery } from 'gatsby'
 
 
@@ -24,11 +24,11 @@ function CopyText() {
   return <div dangerouslySetInnerHTML={copyTextMarkup()} />;
 }
 
-const Hero = (props) => (
+const Hero = () => (
   <StaticQuery
     query={graphql`
       query {
-        desktop: file(relativePath: { eq: "wall-front.jpg" }) {
+        desktop: file(relativePath: { eq: "wall-front-light.jpg" }) {
           childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid_noBase64

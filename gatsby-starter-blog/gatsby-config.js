@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Caleb Fetzer - Developer`,
+    title: `Caleb Fetzer - Portfolio Blog Site`,
     author: `Caleb Fetzer`,
-    authorBio: `A freelance Web Developer living in Perth, Western Australia`,
+    authorBio: `A web developer living in Perth, Western Australia`,
     description: `A personal portfolio and blog showcasing work done by me, Caleb Fetzer, 
         including tutorials involving technologies such as
         Express.js, Node.js, MongoDB, NoSQL. I also write about office culture, business practice

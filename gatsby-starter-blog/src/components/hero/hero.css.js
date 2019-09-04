@@ -7,7 +7,6 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.div`
-  color: #333;
   position: absolute;
   top: 40%;
   transform: translate(20%, 0);

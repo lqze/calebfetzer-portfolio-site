@@ -38,6 +38,6 @@ a {
 }
 
 a:hover {
-  color: rgb(55, 133, 228);
+  color: rgba(55, 133, 228, 0.8);
   transition: ease-in-out 0.2s;
 }

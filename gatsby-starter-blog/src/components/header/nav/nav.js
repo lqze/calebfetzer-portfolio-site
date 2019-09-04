@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import { StyledNav, NavBranding } from './nav.css';
 
@@ -9,9 +9,9 @@ function LinkComponent(props) {
   
   return navMenu.map((item) => 
     <li key={item}>
-      <Link to={(item === 'blog') ? '/blog' : '#' + item}>
+      <a href={(item === 'blog') ? '/blog' : '#' + item}>
         {item}
-      </Link>
+      </a>
     </li>
   );
 };
@@ -34,9 +34,9 @@ const Nav = ({ props }) => {
     <StyledNav className='test-nav'>
       <NavBranding>
         <h2>
-        <Link to='/'>
+        <a href='/'>
           {title}
-        </Link>
+        </a>
         </h2>
       </NavBranding>
       <ul>

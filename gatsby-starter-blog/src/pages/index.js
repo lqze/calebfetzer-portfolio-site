@@ -1,3 +1,5 @@
+/* Single Page Layout for index page */
+
 import React from "react"
 import { Link, graphql } from "gatsby"
 
@@ -6,6 +8,9 @@ import Layout from "../components/layout/layout"
 import Hero from "../components/hero/hero"
 import SEO from "../components/seo"
 import Header from '../components/header/header'
+
+// Import sections to be displayed
+import Section from '../components/section/section'
 
 class Index extends React.Component {
   render() {
@@ -18,6 +23,7 @@ class Index extends React.Component {
           <Hero>{this.props.location}
             <Header location={this.props.location} title={siteTitle} />
           </Hero>
+          <Section name={`work`} />
           <SEO title="All posts" />
           <Bio />
           {posts.map(({ node }) => {

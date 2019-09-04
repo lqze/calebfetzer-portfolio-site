@@ -23,7 +23,7 @@ class Index extends React.Component {
           <Hero>{this.props.location}
             <Header location={this.props.location} title={siteTitle} />
           </Hero>
-          <Section name={`work`} />
+          <Section name={`about`} id={`about`}/>
           <SEO title="All posts" />
           <Bio />
           {posts.map(({ node }) => {

@@ -7,5 +7,4 @@ export const MainImage = styled.div`
 
 export const ImageContainer = styled.div`
   margin: 5rem;
-  
 `;

@@ -42,15 +42,19 @@ const WorkSection = () => (
           </ImageContainer>
         </LeftHalf>
         <RightHalf backgroundColor="inherit" style={
-          {justifyContent: 'center'}
+          {
+            justifyContent: 'center',
+          }
         }>
-          <article>
-            <h2>Warrantly {data.sectionContentJson.title}</h2>
-            <div dangerouslySetInnerHTML={{
-              __html: data.sectionContentJson.content.childMarkdownRemark.html
-              }} 
-            /> 
-          </article>
+          <div dangerouslySetInnerHTML={{
+            __html: data.sectionContentJson.content.childMarkdownRemark.html
+            }}
+            style={{
+              fontWeight: 300,
+              margin: `0 5rem`,
+              fontSize: `2rem`,
+            }}
+          /> 
         </RightHalf>
       </Section>
     )

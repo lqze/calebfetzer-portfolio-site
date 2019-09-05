@@ -1,4 +1,4 @@
-import React, { Children } from "react"
+import React from "react"
 
 
 import { Container, Title, BgImage, LeftHalf, RightHalf, Copy } from './hero.css'

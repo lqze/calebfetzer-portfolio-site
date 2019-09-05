@@ -26,7 +26,7 @@ export const Title = styled.div `
   }
 `;
 
-export const Copy = styled.p`
+export const Copy = styled.div`
   div {
     font-size: 2.5rem;
     font-weight: 300;
@@ -88,8 +88,7 @@ export const RightHalf = styled.div `
 
 `;
 
-export const BgImage = styled(BackgroundImage)
-`
+export const BgImage = styled(BackgroundImage)`
   height: 100vh;
   background-size: cover;
 `;

@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 import Header from '../components/header/header'
 
 // Import sections to be displayed
-import Section from '../components/section/section'
+import WorkSection from '../components/workSection/workSection'
 
 class Index extends React.Component {
   render() {
@@ -23,30 +23,33 @@ class Index extends React.Component {
           <Hero>{this.props.location}
             <Header location={this.props.location} title={siteTitle} />
           </Hero>
-          <Section name={`workSection`} id={`work`}/>
+          <WorkSection name={`workSection`} id={`work`}/>
           <SEO title="All posts" />
           <Bio />
           {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <article key={node.fields.slug}>
-                <header>
-                  <h3>
-                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </section>
-              </article>
-            )
+            console.log(node.frontmatter);
+            if(node.frontmatter.isPost === 'true') {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3>
+                      <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                        {title}
+                      </Link>
+                    </h3>
+                    <small>{node.frontmatter.date}</small>
+                  </header>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.frontmatter.description || node.excerpt,
+                      }}
+                    />
+                  </section>
+                </article>
+              )
+            }
           })}
         </Layout>
     )
@@ -55,8 +58,8 @@ class Index extends React.Component {
 
 export default Index
 
-export const pageQuery = graphql`
-  query {
+export const query = graphql`
+  query IndexpageQuery {
     site {
       siteMetadata {
         title

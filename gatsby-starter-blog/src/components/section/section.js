@@ -1,7 +1,7 @@
 /* Sections are 2 column layouts with full viewport height set */
 
 import React from "react"
-import { StyledSection, LeftHalf, RightHalf } from './section.css'
+import { StyledSection} from './section.css'
 
 class Section extends React.Component {
   render() {

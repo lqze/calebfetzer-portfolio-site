@@ -11,6 +11,7 @@ import Header from '../components/header/header'
 
 // Import sections to be displayed
 import WorkSection from '../components/workSection/workSection'
+import AboutSection from '../components/aboutSection/aboutSection'
 
 class Index extends React.Component {
   render() {
@@ -20,14 +21,14 @@ class Index extends React.Component {
 
     return (
         <Layout location={this.props.location} title={siteTitle}>
-          <Hero>{this.props.location}
+          <Hero name={`heroSection`} id={`hero`}>
             <Header location={this.props.location} title={siteTitle} />
           </Hero>
-          <WorkSection name={`workSection`} id={`work`}/>
+          <WorkSection name={`workSection`} id={`work`} />
+          <AboutSection name={`aboutSection`} id={`about`} />  
           <SEO title="All posts" />
           <Bio />
           {posts.map(({ node }) => {
-            console.log(node.frontmatter);
             if(node.frontmatter.isPost === 'true') {
               const title = node.frontmatter.title || node.fields.slug
               return (

@@ -6,7 +6,7 @@ class Layout extends React.Component {
     const { children } = this.props
     return (
       <div>
-        <Nav />
+        <Nav />    
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with

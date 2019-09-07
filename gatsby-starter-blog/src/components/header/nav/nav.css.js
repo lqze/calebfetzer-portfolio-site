@@ -34,8 +34,8 @@ export const StyledNav = styled.nav`
     color: inherit;
   }
   
-  .active {
-    color: #a9dc76;
+  .active-link {
+    color: rgba(55, 133, 228, 0.8);
   }
 
   &:hover {

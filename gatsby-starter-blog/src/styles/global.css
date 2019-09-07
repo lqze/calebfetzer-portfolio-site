@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -64,5 +65,9 @@ a {
 
 a:hover {
   color: rgba(55, 133, 228, 0.8);
+  transition: ease-in-out 0.2s;
+}
+
+section, div {
   transition: ease-in-out 0.2s;
 }

@@ -30,7 +30,7 @@ function CopyText() {
   return <div dangerouslySetInnerHTML={copyTextMarkup()} />;
 }
 
-const Hero = () => (
+const Hero = (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -47,7 +47,7 @@ const Hero = () => (
       // Set ImageData.
       const imageData = data.desktop.childImageSharp.fluid;
       return ( 
-        <Container>
+        <Container name={props.name} id={props.id}>
           <LeftHalf>
             <Title color={'#a9dc76'}>
               <TitleInnerText />

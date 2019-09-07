@@ -30,7 +30,7 @@ export const Copy = styled.div`
   div {
     font-size: 2.5rem;
     font-weight: 300;
-    a {
+    a.half-link-highlight {
       padding: 0.25rem 0.25rem;
       margin: 0.5rem 0;
       position: relative;

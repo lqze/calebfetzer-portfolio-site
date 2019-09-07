@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledSection = styled.section`
-  height: 100vh;
+  height: ${props => props.height ? props.height : '100vh'};
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -31,4 +31,9 @@ export const RightHalf = styled.div`
   @media screen and (max-width: 726px) {
     display: none;
   }
+`;
+
+export const CenteredContent = styled.div`
+  display: flex;
+  justify-content: center;
 `;

@@ -1,0 +1,19 @@
+{
+  "gallery": [
+    {
+      "image": "css_pic.png"
+    },
+    {
+      "image": "html5_pic.png"
+    },
+    {  
+      "image": "js_pic.png"
+    },
+    {  
+      "image": "node_pic.png"
+    },
+    {  
+      "image": "react_pic.png"
+    }
+  ]  
+}

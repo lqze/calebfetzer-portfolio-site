@@ -7,7 +7,7 @@ class Section extends React.Component {
   render() {
     const { children } = this.props
     return (
-      <StyledSection name={this.props.name} id={this.props.id}>
+      <StyledSection name={this.props.name} id={this.props.id} height={this.props.height}>
         {children}
       </StyledSection>
     )

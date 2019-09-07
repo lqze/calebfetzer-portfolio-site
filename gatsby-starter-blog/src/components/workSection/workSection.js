@@ -5,7 +5,7 @@ import Image from "gatsby-image"
 import Section from "../section/section"
 import { LeftHalf, RightHalf } from '../section/section.css'
 
-import { ImageContainer } from './work/work.css'
+import { ImgContainer } from './work/work.css'
 
 const WorkSection = (props) => (
   <StaticQuery
@@ -35,11 +35,11 @@ const WorkSection = (props) => (
         <LeftHalf backgroundColor='monokai' style={
           {justifyContent: 'center'}
         }>
-          <ImageContainer>
+          <ImgContainer>
             <a href="https://warrantly.com.au" target="about_blank">
             <Image fluid={imageData} />
             </a>
-          </ImageContainer>
+          </ImgContainer>
         </LeftHalf>
         <RightHalf backgroundColor="inherit" style={
           {

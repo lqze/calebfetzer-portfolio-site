@@ -32,11 +32,11 @@ const Nav = () => {
         currentClassName="active-link"
         >
           {navMenu.map((item) => {
-              return <li key={item}>
+              return ( <li key={item}>
                 <a href={(item === 'blog') ? '/blog' : '#' + item}>
                   {item.toUpperCase()}
                 </a>
-              </li>
+              </li> )
             })}
       </Scrollspy>
     </StyledNav>

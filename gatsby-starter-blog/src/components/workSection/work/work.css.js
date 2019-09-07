@@ -5,6 +5,6 @@ export const MainImage = styled.div`
   align-self: center;
 `;
 
-export const ImageContainer = styled.div`
+export const ImgContainer = styled.div`
   margin: 5rem;
 `;

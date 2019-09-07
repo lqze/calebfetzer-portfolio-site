@@ -1,7 +1,7 @@
----
-description: "Short biography of my work skillset"
----
+# About
 
-# What can I do
+Following a childhood passion of all things computing, I have a degree in Computer Science which helps me to pursue my programming endeavours.
 
-My work is done using the latest technology stack, to ensure your customer service experience is being delivered to the highest standard.
+My professional career consists of various soft and technical skills, such as team management, client relations, sales, customer service and conflict resolution.
+
+In terms of an ever changing world of web development, I make sure to employ the latest technology trends to ensure that the end result is structured with professionalism and the future in mind.

@@ -3,7 +3,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import Section from "../section/section"
-import { LeftHalf, RightHalf } from '../section/section.css'
+import { CenteredContent } from '../section/section.css'
 
 import { ImageContainer } from './aboutSection.css'
 
@@ -24,15 +24,7 @@ const AboutSection = (props) => (
   render = { data => {
     return (
       <Section name={props.name} id={props.id}>
-        <LeftHalf backgroundColor='monokai' style={
-          {justifyContent: 'center'}
-        }>
-        </LeftHalf>
-        <RightHalf backgroundColor="inherit" style={
-          {
-            justifyContent: 'center',
-          }
-        }>
+        <CenteredContent>
           <div dangerouslySetInnerHTML={{
             __html: data.aboutJson.content.childMarkdownRemark.html
             }}
@@ -41,8 +33,8 @@ const AboutSection = (props) => (
               margin: `0 5rem`,
               fontSize: `2rem`,
             }}
-          /> 
-        </RightHalf>
+          />
+        </CenteredContent>
       </Section>
     )
     }}

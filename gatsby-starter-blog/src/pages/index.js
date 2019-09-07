@@ -12,6 +12,7 @@ import Header from '../components/header/header'
 // Import sections to be displayed
 import WorkSection from '../components/workSection/workSection'
 import AboutSection from '../components/aboutSection/aboutSection'
+import SkillsBanner from '../components/skillsBanner/skillsBanner'
 
 class Index extends React.Component {
   render() {
@@ -25,6 +26,7 @@ class Index extends React.Component {
             <Header location={this.props.location} title={siteTitle} />
           </Hero>
           <WorkSection name={`workSection`} id={`work`} />
+          <SkillsBanner />
           <AboutSection name={`aboutSection`} id={`about`} />  
           <SEO title="All posts" />
           <Bio />

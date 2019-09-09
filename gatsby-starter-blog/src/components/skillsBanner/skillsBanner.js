@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Section from "../section/section"
 import Gallery from "../gallery/gallery"
 
-import { ImageContainer } from "./skillsBanner.css"
+import { ImageContainer, ImageContainerInner } from "./skillsBanner.css"
 
 const SkillsBanner = (props) => (
   <StaticQuery
@@ -20,6 +20,7 @@ const SkillsBanner = (props) => (
         }
         skillsJson {
           gallery {
+            alt
             image {
               childImageSharp {
                 fluid(quality: 100) {

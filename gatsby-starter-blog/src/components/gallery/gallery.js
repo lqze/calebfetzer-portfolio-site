@@ -10,8 +10,8 @@ function ItemComponent(props) {
   )
 }
 
-const Gallery = ({ items }) => (
-  <ItemComponent items={items} />
+const Gallery = ({ items, alt }) => (
+  <ItemComponent items={items} alt={alt}/>
 );
 
 Gallery.propTypes = {

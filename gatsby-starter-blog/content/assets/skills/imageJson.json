@@ -1,19 +1,24 @@
 {
   "gallery": [
     {
-      "image": "css_pic.png"
+      "image": "css_pic.png",
+      "alt" : "CSS3 Icon"
     },
     {
-      "image": "html5_pic.png"
+      "image": "html5_pic.png",
+      "alt" : "HTML5 Icon"
     },
     {  
-      "image": "js_pic.png"
+      "image": "js_pic.png",
+      "alt" : "JavaScript Icon"
     },
     {  
-      "image": "node_pic.png"
+      "image": "node_pic.png",
+      "alt" : "Node.js Icon"
     },
     {  
-      "image": "react_pic.png"
+      "image": "react_pic.png",
+      "alt" : "React.js Icon"
     }
   ]  
 }

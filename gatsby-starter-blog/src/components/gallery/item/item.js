@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-import { ImageContainer } from './item.css'
 
-const Item = ({ image }) => (
-  <Img fluid={image ? image.childImageSharp.fluid : {}} alt={'temp'} />
+const Item = ({ image, alt }) => (
+    <Img fluid={image ? image.childImageSharp.fluid : {}} alt={alt} />
 );
 
 Item.propTypes = {

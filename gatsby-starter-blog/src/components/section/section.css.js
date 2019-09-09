@@ -6,6 +6,7 @@ export const StyledSection = styled.section`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  background-color: ${props => props.backgroundColor ? props.backgroundColor : "inherit"};
 `;
 
 

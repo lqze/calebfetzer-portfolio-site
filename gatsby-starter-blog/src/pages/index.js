@@ -15,7 +15,9 @@ import AboutSection from '../components/aboutSection/aboutSection'
 import SkillsBanner from '../components/skillsBanner/skillsBanner'
 
 class Index extends React.Component {
+  
   render() {
+
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges

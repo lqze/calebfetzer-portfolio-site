@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article>
-          <Header location={this.props.location}>
+          <Header location={this.props.location} className="blog-post">
             <h1
                 style={{
                   marginBottom: 0,

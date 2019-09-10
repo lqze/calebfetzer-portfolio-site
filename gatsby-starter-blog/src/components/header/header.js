@@ -5,21 +5,9 @@ import { StyledHeader } from './header.css';
 
 class Header extends React.Component {
   render () {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let styleClass;
-    if (location.pathname === rootPath) {
-      styleClass = 'home__default';
-    } else {
-      styleClass = '';
-    }
+    const { children } = this.props;
     return (
-      <StyledHeader className={styleClass}>
-        <h1>
-        <Link to='/'>
-          {title}
-        </Link>
-        </h1>
+      <StyledHeader className={this.props.className ? this.props.className : ''}>
         {children}
       </StyledHeader>
     )

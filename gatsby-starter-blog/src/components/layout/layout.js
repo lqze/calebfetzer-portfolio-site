@@ -1,6 +1,8 @@
 import React from "react"
+import Headroom from "react-headroom"
+
+import Header from "../header/header"
 import Nav from "../header/nav/nav"
-import { hideNavOnScroll } from "../../js/main"
 
 class Layout extends React.Component {
   
@@ -8,7 +10,9 @@ class Layout extends React.Component {
     const { children } = this.props
     return (
       <div>
-        <Nav />    
+        <Header className="navigation">
+          <Nav />
+        </Header>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with

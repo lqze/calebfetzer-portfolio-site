@@ -1,20 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
-  position: fixed;
-  top: 0;
-  width: 100%;
-
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  
-  max-height: 120px;
-  z-index: 999;
-
-  background-color: rgba(249, 247, 247, 0.1);
-  transition: ease-in-out 0.2s;
-  
+  align-items: center;
+  width: 100%;
 
   ul {
     display: inline-flex;
@@ -46,11 +36,13 @@ export const StyledNav = styled.nav`
 
 export const NavBranding = styled.div`
   display: flex;
+  align-self: center;
+
   margin-right: 4rem;
   margin-left: 4rem;
 
   h1, h2, h3, h4 {
-    margin: 1rem;
+    margin: 0rem;
   }
 `;
 

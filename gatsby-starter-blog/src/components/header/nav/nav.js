@@ -21,11 +21,11 @@ const Nav = () => {
   return (
     <StyledNav>
       <NavBranding>
-        <h2>
+        <h4>
           <Link to='/'>
-            {author.toUpperCase()}
+            {author}
           </Link>
-        </h2>
+        </h4>
       </NavBranding>
       
       <Scrollspy items={['work', 'about', 'contact']} 

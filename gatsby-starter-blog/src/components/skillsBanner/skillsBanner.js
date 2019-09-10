@@ -5,9 +5,9 @@ import { StaticQuery, graphql } from "gatsby"
 import Section from "../section/section"
 import Gallery from "../gallery/gallery"
 
-import { ImageContainer, ImageContainerInner } from "./skillsBanner.css"
+import { ImageContainer } from "./skillsBanner.css"
 
-const SkillsBanner = (props) => (
+const SkillsBanner = () => (
   <StaticQuery
     query={graphql`
       query {

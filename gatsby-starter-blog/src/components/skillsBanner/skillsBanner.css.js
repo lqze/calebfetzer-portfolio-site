@@ -13,8 +13,4 @@ export const ImageContainer = styled.div`
     max-width: 148px;
     margin: 1rem;
   }
-
-  div:hover {
-    max-width: 166px;
-  }
 `;

@@ -7,6 +7,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout/layout"
 import Hero from "../components/hero/hero"
 import SEO from "../components/seo"
+import ScrollingColorBackground from "react-scrolling-color-background"
 
 // Import sections to be displayed
 import WorkSection from '../components/workSection/workSection'
@@ -39,21 +40,43 @@ const DisplayPostsComponent = (props) => {
     }
   })
 }
-
+const customStyle = {
+  position: 'fixed',
+  inset: 0,
+  zIndex: -100000,
+}
 class Index extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+    
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <Hero name={`heroSection`} id={`hero`} />
-        <WorkSection name={`workSection`} id={`work`} />
-        <SkillsBanner />
-        <AboutSection name={`aboutSection`} id={`about`} />  
-        <SEO title="All posts" />
-        <DisplayPostsComponent posts={posts} />
-        <Bio />
+        <ScrollingColorBackground
+            selector='.js-color-stop[data-background-color]'
+            colorDataAttribute='data-background-color'
+            initialRgb='rgb(0, 0, 0)'
+            style={customStyle}
+            >
+        </ScrollingColorBackground>
+          <section 
+            data-background-color='rgb(32, 202, 172)'
+            className='js-color-stop'>
+            <Hero name={`heroSection`} id={`hero`} />
+          </section> 
+          <WorkSection name={`workSection`} id={`work`}
+            data-background-color='rgb(32, 202, 172)'
+            className='js-color-stop'
+            />
+          <SkillsBanner />
+          <AboutSection name={`aboutSection`} id={`about`}
+            data-background-color='rgb(60, 191, 246)'
+            className='js-color-stop'
+            />  
+          <SEO title="All posts" />
+          <DisplayPostsComponent posts={posts} />
+          <Bio />
       </Layout>
     )
   }

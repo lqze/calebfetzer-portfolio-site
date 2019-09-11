@@ -30,8 +30,14 @@ const WorkSection = (props) => (
     `}
   render = { data => {
     const imageData = data.desktop.childImageSharp.fluid;
+    console.log(props);
     return (
-      <Section name={props.name} id={props.id}>
+      <Section 
+        name={props.name} 
+        id={props.id} 
+        className={props.className} 
+        data-background-color={props['data-background-color']}
+      >
         <LeftHalf backgroundColor='monokai' style={
           {justifyContent: 'center'}
         }>

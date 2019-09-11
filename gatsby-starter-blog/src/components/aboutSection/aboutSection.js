@@ -20,7 +20,12 @@ const AboutSection = (props) => (
     `}
   render = { data => {
     return (
-      <Section name={props.name} id={props.id}>
+      <Section 
+        name={props.name} 
+        id={props.id}
+        className={props.className} 
+        data-background-color={props['data-background-color']}
+      >
         <AngledColorShape />
         <CenteredContent>
           <StyledArticle dangerouslySetInnerHTML={{

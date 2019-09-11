@@ -1,5 +1,5 @@
 import React from "react"
-import Headroom from "react-headroom"
+import ScrollingColorBackground from "react-scrolling-color-background"
 
 import Header from "../header/header"
 import Nav from "../header/nav/nav"
@@ -13,7 +13,9 @@ class Layout extends React.Component {
         <Header className="navigation">
           <Nav />
         </Header>
-        <main>{children}</main>
+        <main>
+          {children} 
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

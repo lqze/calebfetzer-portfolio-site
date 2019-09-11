@@ -6,8 +6,11 @@ import { StyledSection} from './section.css'
 class Section extends React.Component {
   render() {
     const { children } = this.props
+    console.log(this.props)
     return (
-      <StyledSection name={this.props.name} id={this.props.id} height={this.props.height}>
+      <StyledSection name={this.props.name} id={this.props.id} height={this.props.height}
+        className={this.props.className} 
+        data-background-color={this.props["data-background-color"]}>
         {children}
       </StyledSection>
     )

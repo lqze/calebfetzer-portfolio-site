@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Section from "../section/section"
 import Gallery from "../gallery/gallery"
 
-import { ImageContainer } from "./skillsBanner.css"
+import { ImageContainer, StyledHeaderText } from "./skillsBanner.css"
 
 const SkillsBanner = () => (
   <StaticQuery
@@ -33,13 +33,15 @@ const SkillsBanner = () => (
       }
     `}
     render={ data => {
-      const imageData = data.desktop.childImageSharp.fluid;
       const galleryItems = data.skillsJson.gallery;
       return (
         <Section height={`30vh`}>
           <ImageContainer>
             <Gallery items={galleryItems} />
           </ImageContainer>
+          <StyledHeaderText>
+            <h3>The technology I frequently use!</h3>
+          </StyledHeaderText>
         </Section>
       )
     }}

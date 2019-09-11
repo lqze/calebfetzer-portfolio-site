@@ -9,8 +9,17 @@ export const ImageContainer = styled.div`
   width: 100%;
 
   .gatsby-image-wrapper {
-    width: 100%;
+    width: 100vh;
     max-width: 148px;
     margin: 1rem;
   }
+  div:hover {
+    transform: scale(1.2);
+  }
+`;
+
+export const StyledHeaderText = styled.div`
+  flex: 1;
+  text-align: center;
+  margin-top: 3rem;
 `;

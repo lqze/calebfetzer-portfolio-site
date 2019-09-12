@@ -7,7 +7,3 @@ export const CenteredContent = styled.div `
 export const StyledArticle = styled.article `
   font-size: 2.2rem;
 `;
-
-export const AngledColorShape = styled.div `
-  background: red;
-`;

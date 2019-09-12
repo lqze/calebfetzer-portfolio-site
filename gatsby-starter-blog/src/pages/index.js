@@ -10,13 +10,14 @@ import SEO from "../components/seo"
 import ScrollingColorBackground from "react-scrolling-color-background"
 
 // Import sections to be displayed
-import WorkSection from '../components/workSection/workSection'
-import AboutSection from '../components/aboutSection/aboutSection'
-import SkillsBanner from '../components/skillsBanner/skillsBanner'
+import WorkSection from "../components/workSection/workSection"
+import AboutSection from "../components/aboutSection/aboutSection"
+import SkillsBanner from "../components/skillsBanner/skillsBanner"
+import ContactSection from '../components/contact/contactSection'
 
-const DisplayPostsComponent = (props) => {
-  return props.posts.map(({ node }) => {
-    if(node.frontmatter.isPost === true) {
+const DisplayPostsComponent = props => {
+  return props.posts.map(({node})  => { // eslint-disable-line
+    if (node.frontmatter.isPost === true) {
       const title = node.frontmatter.title || node.fields.slug
       return (
         <article key={node.fields.slug}>
@@ -39,9 +40,34 @@ const DisplayPostsComponent = (props) => {
       )
     }
   })
+
+  // return props.posts.map(({node})  => {
+  //   if (node.frontmatter.isPost === true) {
+  //     const title = node.frontmatter.title || node.fields.slug
+  //     return (
+  //       <article key={node.fields.slug}>
+  //         <header>
+  //           <h3>
+  //             <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+  //               {title}
+  //             </Link>
+  //           </h3>
+  //           <small>{node.frontmatter.date}</small>
+  //         </header>
+  //         <section>
+  //           <p
+  //             dangerouslySetInnerHTML={{
+  //               __html: node.frontmatter.description || node.excerpt,
+  //             }}
+  //           />
+  //         </section>
+  //       </article>
+  //     )
+  //   }
+  // })
 }
 const customStyle = {
-  position: 'fixed',
+  position: "fixed",
   inset: 0,
   zIndex: -100000,
 }
@@ -50,39 +76,49 @@ class Index extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <ScrollingColorBackground
-            selector='.js-color-stop[data-background-color]'
-            colorDataAttribute='data-background-color'
-            initialRgb='rgb(0, 0, 0)'
-            style={customStyle}
-            >
-        </ScrollingColorBackground>
-          <section 
-            data-background-color='rgb(32, 202, 172)'
-            className='js-color-stop'>
-            <Hero name={`heroSection`} id={`hero`} />
-          </section> 
-          <WorkSection name={`workSection`} id={`work`}
-            data-background-color='rgb(32, 202, 172)'
-            className='js-color-stop'
-            />
-          <SkillsBanner />
-          <AboutSection name={`aboutSection`} id={`about`}
-            data-background-color='rgb(60, 191, 246)'
-            className='js-color-stop'
-            />  
-          <SEO title="All posts" />
-          <DisplayPostsComponent posts={posts} />
-          <Bio />
+          selector=".js-color-stop[data-background-color]"
+          colorDataAttribute="data-background-color"
+          initialRgb="rgb(0, 0, 0)"
+          style={customStyle}
+        ></ScrollingColorBackground>
+        <section
+          data-background-color="rgb(255,255,255)"
+          className="js-color-stop"
+        >
+          <Hero name={`heroSection`} id={`hero`} />
+        </section>
+        <WorkSection
+          name={`workSection`}
+          id={`work`}
+          data-background-color="rgb(255, 239, 186)"
+          className="js-color-stop"
+        />
+        <SkillsBanner />
+        <AboutSection
+          name={`aboutSection`}
+          id={`about`}
+          data-background-color="rgb(251, 215, 134)"
+          className="js-color-stop"
+        />
+        <ContactSection 
+          name={`contactSection`}
+          id={`contact`}
+          data-background-color="rgb(251, 215, 134)"
+          className="js-color-stop"
+        />
+        <SEO title="All posts" />
+        <DisplayPostsComponent posts={posts} />
+        <Bio />
       </Layout>
     )
   }
 }
 
-export default Index
+export default Index;
 
 export const query = graphql`
   query IndexpageQuery {

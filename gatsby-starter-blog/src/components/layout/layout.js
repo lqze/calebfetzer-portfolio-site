@@ -1,5 +1,4 @@
 import React from "react"
-import ScrollingColorBackground from "react-scrolling-color-background"
 
 import Header from "../header/header"
 import Nav from "../header/nav/nav"

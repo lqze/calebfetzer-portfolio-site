@@ -30,7 +30,6 @@ const WorkSection = (props) => (
     `}
   render = { data => {
     const imageData = data.desktop.childImageSharp.fluid;
-    console.log(props);
     return (
       <Section 
         name={props.name} 

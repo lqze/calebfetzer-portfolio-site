@@ -2,7 +2,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Section from "../section/section"
-import { CenteredContent, StyledArticle, AngledColorShape } from './aboutSection.css'
+import { CenteredContent, StyledArticle } from './aboutSection.css'
 
 const AboutSection = (props) => (
   <StaticQuery
@@ -26,7 +26,6 @@ const AboutSection = (props) => (
         className={props.className} 
         data-background-color={props['data-background-color']}
       >
-        <AngledColorShape />
         <CenteredContent>
           <StyledArticle dangerouslySetInnerHTML={{
             __html: data.aboutJson.content.childMarkdownRemark.html

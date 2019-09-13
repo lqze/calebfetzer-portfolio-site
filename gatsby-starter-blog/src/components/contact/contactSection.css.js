@@ -1,15 +1,15 @@
 import styled from "styled-components"
 
 export const CenteredContent = styled.div`
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: left;
-  margin-left: 0;
-  margin-right: 0;
-  width: 50%;
+  width: 35vw;
+  h1 {
+    text-align: center;
+  }
 `
 
 export const FormContainer = styled.div`
@@ -54,4 +54,12 @@ export const FormButton = styled.button`
   font-size: 2rem;
   background-color: rgba(0, 0, 0, 0);
   font-weight: bold;
+  transition: ease-in-out 0.3s;
+  &:hover {
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+    background: white;
+    color: #333;
+    box-shadow: 4px 4px 4px rgb(193, 165, 100);
+  }
 `

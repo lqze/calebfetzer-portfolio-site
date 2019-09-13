@@ -37,14 +37,6 @@ export const Copy = styled.div`
 
       &:hover {
         color: black;
-        padding: 1rem 0.5rem;
-        &:after {
-          background-color: rgba(120,220,232, 0.5);   
-          height: 75%;
-          color: inherit;
-          border-radius: 8px;
-          box-shadow: 0px 2px 1px #ececec;
-        }
       }
 
       &:after {
@@ -59,6 +51,19 @@ export const Copy = styled.div`
         -webkit-transition: all .1s linear;
         -moz-transition: all .1s linear;
         transition: all .1s linear;
+      }
+    }
+    a.email-link {
+      &:hover {
+        color: black;
+        padding: 1rem 0.5rem;
+        &:after {
+          background-color: rgba(120,220,232, 0.5);   
+          height: 75%;
+          color: inherit;
+          border-radius: 8px;
+          box-shadow: 0px 2px 1px #ececec;
+        }
       }
     }
   }

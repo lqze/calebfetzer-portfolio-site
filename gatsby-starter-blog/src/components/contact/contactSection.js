@@ -11,11 +11,12 @@ const ContactSection = (props) => {
       id={props.id}
       className={props.className}
       data-background-color={props["data-background-color"]}
+      style={{justifyContent: 'center'}}
     >
       <CenteredContent>
         <h1>Let's work together!</h1>
         <FormContainer>
-          <form action="">
+          <form action="" method="POST">
             <div>
               <label htmlFor='name'>Name</label>
               <input type='text' id='name' name='contact_name' placeholder="Dr. Cool" required />
@@ -30,7 +31,7 @@ const ContactSection = (props) => {
             </div>
             <div>
               <label htmlFor='message'>Message</label>
-              <textarea id='message' name='contact_message'></textarea>
+              <textarea id='message' name='contact_message' ></textarea>
             </div>
             <div className='button__wrapper'>
               <FormButton type="submit" method="POST" data-netlify="true">SEND</FormButton>

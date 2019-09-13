@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
+  
+  transition: ease-in-out 0.3s;
+  
   .home__default {
     color: blue;
   }
@@ -18,12 +21,16 @@ export const StyledHeader = styled.header`
     z-index: 999;
 
     background-color: rgba(249, 247, 247, 0.1);
-    transition: ease-in-out 0.2s;
+    
   }
 
   &.blog-post {
     display: block;
     margin-top: 6.5%;
+  }
+
+  &:hover {
+    top: 0 !important;
   }
   
 `;

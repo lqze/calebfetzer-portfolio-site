@@ -40,37 +40,15 @@ const DisplayPostsComponent = props => {
       )
     }
   })
-
-  // return props.posts.map(({node})  => {
-  //   if (node.frontmatter.isPost === true) {
-  //     const title = node.frontmatter.title || node.fields.slug
-  //     return (
-  //       <article key={node.fields.slug}>
-  //         <header>
-  //           <h3>
-  //             <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-  //               {title}
-  //             </Link>
-  //           </h3>
-  //           <small>{node.frontmatter.date}</small>
-  //         </header>
-  //         <section>
-  //           <p
-  //             dangerouslySetInnerHTML={{
-  //               __html: node.frontmatter.description || node.excerpt,
-  //             }}
-  //           />
-  //         </section>
-  //       </article>
-  //     )
-  //   }
-  // })
 }
+// ScrollingColorBackground Custom Style
 const customStyle = {
   position: "fixed",
   inset: 0,
-  zIndex: -100000,
+  top:0, bottom:0, right:0, left:0,
+  zIndex: -100000, // needed to prevent background sitting on top of text
 }
+
 class Index extends React.Component {
   render() {
     const { data } = this.props
@@ -82,7 +60,7 @@ class Index extends React.Component {
         <ScrollingColorBackground
           selector=".js-color-stop[data-background-color]"
           colorDataAttribute="data-background-color"
-          initialRgb="rgb(0, 0, 0)"
+          initialRgb="rgb(0, 0, 0, 0)"
           style={customStyle}
         ></ScrollingColorBackground>
         <section
@@ -94,21 +72,21 @@ class Index extends React.Component {
         <WorkSection
           name={`workSection`}
           id={`work`}
-          data-background-color="rgb(255, 239, 186)"
+          data-background-color="rgb(254, 235, 217)"
           className="js-color-stop"
         />
         <SkillsBanner />
         <AboutSection
           name={`aboutSection`}
           id={`about`}
-          data-background-color="rgb(251, 215, 134)"
+          data-background-color="rgb(255, 247, 218)"
           className="js-color-stop"
         />
         <ContactSection 
           name={`contactSection`}
           id={`contact`}
           data-background-color="rgb(251, 215, 134)"
-          className="js-color-stop"
+          className="js-color-stop justify-center"
         />
         <SEO title="All posts" />
         <DisplayPostsComponent posts={posts} />

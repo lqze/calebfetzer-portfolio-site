@@ -7,6 +7,9 @@ export const StyledSection = styled.section`
   flex-wrap: wrap;
   width: 100%;
   background-color: ${props => props.backgroundColor ? props.backgroundColor : "inherit"};
+  &.justify-center {
+    justify-content: center !important;
+  }
 `;
 
 

@@ -5,6 +5,7 @@ export const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  transition: ease-in-out 0.3s;
 
   ul {
     display: inline-flex;
@@ -29,7 +30,7 @@ export const StyledNav = styled.nav`
   }
 
   &:hover {
-    background-color: rgba(249, 247, 247, 0.7);
+    background-color: rgba(249, 249, 249, 0.7);
     transition: ease-in-out 0.3s;
   }
 `;

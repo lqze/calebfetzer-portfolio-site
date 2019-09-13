@@ -21,7 +21,8 @@ function copyTextMarkup() {
     </p>
     <p>
       For any kind of enquiry, please feel free to email me at 
-      <a class="half-link-highlight" href="mailto:caleb.fetzer@gmail.com?subject='Website Enquiry'">caleb.fetzer@gmail.com</a>
+      <a class="half-link-highlight email-link" href="mailto:caleb.fetzer@gmail.com?subject='Website Enquiry'">caleb.fetzer@gmail.com</a> 
+      or write me <a class="half-link-highlight" href="#contact">below</a>
     </p>
     <p>And feel free to take a look at my <a href="#work">work</a>!</p>
   `}

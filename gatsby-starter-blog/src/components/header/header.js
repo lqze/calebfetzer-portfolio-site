@@ -7,9 +7,6 @@ class Header extends React.Component {
     // https://lxieyang.github.io/blogs/tech-2018-08-18-reactstrap-gatsby-auto-hiding-navbar-trick/
     
     this.toggle = this.toggleNavbar.bind(this);
-  }
-
-    componentDidMount() {
       if (typeof window !== 'undefined') {
       let prevScrollpos = window.pageYOffset;
       window.onscroll = function () {
@@ -28,7 +25,7 @@ class Header extends React.Component {
       }
     }
   }
-
+  
   state = {
     isOpen: false
   };

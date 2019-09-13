@@ -24,7 +24,6 @@ import { ContentWrapper }  from "../components/section/section.css"
 import ScrollDownButton from "../components/scrollDownButton/scrollDown"
 
 
-smoothscroll.polyfill();
 const DisplayPostsComponent = props => {
   return props.posts.map(({node})  => { // eslint-disable-line
     if (node.frontmatter.isPost === true) {
@@ -60,6 +59,10 @@ const customStyle = {
 }
 
 class Index extends React.Component {
+  componentDidMount() {
+    smoothscroll.polyfill();
+  }
+
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title

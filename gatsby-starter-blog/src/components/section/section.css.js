@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledSection = styled.section`
-  height: ${props => props.height ? props.height : '90vh'};
+  height: ${props => props.height ? props.height : '100vh'};
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

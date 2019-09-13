@@ -3,6 +3,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
+import * as smoothscroll from 'smoothscroll-polyfill'
+
+
 
 import Bio from "../components/bio"
 import Layout from "../components/layout/layout"
@@ -20,6 +23,8 @@ import Section from "../components/section/section"
 import { ContentWrapper }  from "../components/section/section.css"
 import ScrollDownButton from "../components/scrollDownButton/scrollDown"
 
+
+smoothscroll.polyfill();
 const DisplayPostsComponent = props => {
   return props.posts.map(({node})  => { // eslint-disable-line
     if (node.frontmatter.isPost === true) {
@@ -109,7 +114,7 @@ class Index extends React.Component {
           data-background-color="rgb(255, 247, 218)"
           className="js-color-stop"
         >
-        <SkillsBanner />
+        {/* <SkillsBanner /> */}
         <ScrollDownButton nextSection={'#contact'} />
         </AboutSection>
 

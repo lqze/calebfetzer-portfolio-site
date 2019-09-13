@@ -37,6 +37,7 @@
     "react-scrolling-color-background": "^1.0.2",
     "react-scrollspy": "^3.4.0",
     "react-typography": "^0.16.19",
+    "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {

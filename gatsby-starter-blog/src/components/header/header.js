@@ -7,10 +7,10 @@ class Header extends React.Component {
     // https://lxieyang.github.io/blogs/tech-2018-08-18-reactstrap-gatsby-auto-hiding-navbar-trick/
     
     this.toggle = this.toggleNavbar.bind(this);
-    window.onscroll = (e) => {
-      console.log(e);
-    }
-    if (typeof window !== 'undefined') {
+  }
+
+    componentDidMount() {
+      if (typeof window !== 'undefined') {
       let prevScrollpos = window.pageYOffset;
       window.onscroll = function () {
         const maxScroll = document.body.clientHeight - window.innerHeight;

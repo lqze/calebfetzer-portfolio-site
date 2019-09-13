@@ -2,7 +2,8 @@ import styled from "styled-components"
 
 export const ImageContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  margin: 0 auto;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;

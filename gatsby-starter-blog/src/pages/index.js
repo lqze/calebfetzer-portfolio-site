@@ -67,10 +67,12 @@ class Index extends React.Component {
           colorDataAttribute="data-background-color"
           initialRgb="rgb(0, 0, 0, 0)"
           style={customStyle}
-        ></ScrollingColorBackground>
+        />
+        
         <Section
           data-background-color="rgb(255, 248, 221)"
           className="js-color-stop"
+          height={'100vh'}
         >
           <ContentWrapper>
             <div>
@@ -82,25 +84,35 @@ class Index extends React.Component {
             <ScrollDownButton nextSection={'#hero'} />
           </ContentWrapper>
         </Section>
-        <section
+        
+        <Section
           data-background-color="rgb(255,251,238)"
           className="js-color-stop"
+          height={'100vh'}
         >
           <Hero name={`heroSection`} id={`hero`} />
-        </section>
+          <ScrollDownButton nextSection={'#work'} />
+        </Section>
+
         <WorkSection
           name={`workSection`}
           id={`work`}
           data-background-color="rgb(254, 235, 217)"
           className="js-color-stop"
-        />
-        <SkillsBanner />
+        >
+        <ScrollDownButton nextSection={'#about'} />
+        </WorkSection>
+
         <AboutSection
           name={`aboutSection`}
           id={`about`}
           data-background-color="rgb(255, 247, 218)"
           className="js-color-stop"
-        />
+        >
+        <SkillsBanner />
+        <ScrollDownButton nextSection={'#contact'} />
+        </AboutSection>
+
         <ContactSection 
           name={`contactSection`}
           id={`contact`}

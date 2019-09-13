@@ -3,7 +3,8 @@ import styled from "styled-components"
 
 
 export const StyledButton = styled.a`
-  width: 6rem;
+  text-align:center;
+  vertical-align: top;
   color: #333;
   margin: 0 auto;
   position: absolute;
@@ -13,6 +14,6 @@ export const StyledButton = styled.a`
   font-size: 4rem;
   &:hover {
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
-    bottom: 6rem;
+    bottom: 5.1rem;
   }
 `;

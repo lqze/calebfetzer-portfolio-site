@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
 
 export const Container = styled.div `
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

@@ -35,14 +35,17 @@ const SkillsBanner = () => (
     render={ data => {
       const galleryItems = data.skillsJson.gallery;
       return (
-        <Section height={`30vh`}>
+        // <Section height={`30vh`}>
+        <div>
+
           <ImageContainer>
             <Gallery items={galleryItems} />
           </ImageContainer>
           <StyledHeaderText>
             <h3>The technology I frequently use!</h3>
           </StyledHeaderText>
-        </Section>
+        </div>
+        // </Section>
       )
     }}
   />

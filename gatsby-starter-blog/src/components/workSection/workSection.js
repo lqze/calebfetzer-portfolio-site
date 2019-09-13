@@ -61,6 +61,7 @@ const WorkSection = (props) => (
             }}
           /> 
         </RightHalf>
+        {props.children}
       </Section>
     )
     }}

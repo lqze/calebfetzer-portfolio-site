@@ -31,6 +31,7 @@ const AboutSection = (props) => (
             __html: data.aboutJson.content.childMarkdownRemark.html
             }}
           />
+          {props.children}
         </CenteredContent>
       </Section>
     )

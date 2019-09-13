@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledSection = styled.section`
-  height: ${props => props.height ? props.height : '100vh'};
+  height: ${props => props.height ? props.height : '90vh'};
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -10,6 +10,7 @@ export const StyledSection = styled.section`
   &.justify-center {
     justify-content: center !important;
   }
+  position: relative;
 `;
 
 

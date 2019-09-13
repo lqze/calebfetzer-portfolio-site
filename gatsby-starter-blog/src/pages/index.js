@@ -2,6 +2,7 @@
 
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout/layout"
@@ -14,6 +15,10 @@ import WorkSection from "../components/workSection/workSection"
 import AboutSection from "../components/aboutSection/aboutSection"
 import SkillsBanner from "../components/skillsBanner/skillsBanner"
 import ContactSection from '../components/contact/contactSection'
+// generic section component
+import Section from "../components/section/section"
+import { ContentWrapper }  from "../components/section/section.css"
+import ScrollDownButton from "../components/scrollDownButton/scrollDown"
 
 const DisplayPostsComponent = props => {
   return props.posts.map(({node})  => { // eslint-disable-line
@@ -63,8 +68,22 @@ class Index extends React.Component {
           initialRgb="rgb(0, 0, 0, 0)"
           style={customStyle}
         ></ScrollingColorBackground>
+        <Section
+          data-background-color="rgb(255, 248, 221)"
+          className="js-color-stop"
+        >
+          <ContentWrapper>
+            <div>
+              <h1>
+                Caleb Fetzer
+              </h1>
+              <h3>Developer</h3>
+            </div>
+            <ScrollDownButton nextSection={'#hero'} />
+          </ContentWrapper>
+        </Section>
         <section
-          data-background-color="rgb(255,255,255)"
+          data-background-color="rgb(255,251,238)"
           className="js-color-stop"
         >
           <Hero name={`heroSection`} id={`hero`} />
@@ -88,9 +107,9 @@ class Index extends React.Component {
           data-background-color="rgb(251, 215, 134)"
           className="js-color-stop justify-center"
         />
-        <SEO title="All posts" />
+        {/* <SEO title="All posts" />
         <DisplayPostsComponent posts={posts} />
-        <Bio />
+        <Bio /> */}
       </Layout>
     )
   }

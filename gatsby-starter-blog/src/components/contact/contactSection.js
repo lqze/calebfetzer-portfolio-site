@@ -4,6 +4,11 @@ import React from "react"
 import Section from "../section/section"
 import { CenteredContent, FormButton, FormContainer } from "./contactSection.css"
 
+function showFlash() {
+  let flashMsg = document.querySelector('.flash-success');
+  flashMsg.style.display = 'block';
+}
+
 const ContactSection = (props) => {
   return (
     <Section
@@ -34,10 +39,13 @@ const ContactSection = (props) => {
               <textarea id='message' name='contact_message' ></textarea>
             </div>
             <div className='button__wrapper'>
-              <FormButton type="submit" method="POST" data-netlify="true">SEND</FormButton>
+              <FormButton type="submit" method="POST" data-netlify="true" onClick={showFlash}>SEND</FormButton>
             </div>
           </form>
         </FormContainer>
+        <div className="flash-success">
+          <h3>Thanks! I'll get back to you asap!</h3>
+        </div>
       </CenteredContent>
     </Section>
   )

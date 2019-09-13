@@ -4,8 +4,8 @@ import { StyledButton } from "./scrollDown.css"
 
 const ScrollDownButton = (props) => {
   return (
-    <StyledButton>
-      <a href={props.nextSection}></a>
+    <StyledButton href={props.nextSection}>
+      ▼
     </StyledButton>
   )
 }

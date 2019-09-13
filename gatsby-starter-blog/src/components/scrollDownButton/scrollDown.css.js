@@ -1,2 +1,18 @@
 import styled from "styled-components"
 
+
+
+export const StyledButton = styled.a`
+  width: 6rem;
+  color: #333;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  font-size: 4rem;
+  &:hover {
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
+    bottom: 6rem;
+  }
+`;

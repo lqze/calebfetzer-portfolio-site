@@ -10,6 +10,10 @@ export const CenteredContent = styled.div`
   h1 {
     text-align: center;
   }
+  div.flash-success {
+    display: none;
+    transition: ease-in 0.2s;
+  }
 `
 
 export const FormContainer = styled.div`
@@ -38,6 +42,8 @@ export const FormContainer = styled.div`
 
   label {
     color: black;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
   }
 
   .button__wrapper {
@@ -49,10 +55,10 @@ export const FormContainer = styled.div`
 export const FormButton = styled.button`
   text-align: center;
   border-radius: 12px;
-  border: 5px solid #fff;
+  border: 0;
   padding: 1rem;
   font-size: 2rem;
-  background-color: rgba(0, 0, 0, 0);
+  background: white;
   font-weight: bold;
   transition: ease-in-out 0.3s;
   &:hover {

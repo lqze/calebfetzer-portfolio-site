@@ -12,7 +12,7 @@ module.exports = {
       `work`,
       `about`,
       `contact`,
-      `blog`,
+      // `blog`,
     ],
   },
   plugins: [

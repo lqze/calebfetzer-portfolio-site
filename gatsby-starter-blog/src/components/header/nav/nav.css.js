@@ -36,11 +36,22 @@ export const StyledNav = styled.nav`
 `;
 
 export const NavBranding = styled.div`
+  text-transform: uppercase;
   display: flex;
   align-self: center;
 
   margin-right: 4rem;
   margin-left: 4rem;
+
+  /* border: 3px solid #333;
+  padding: .8rem 1rem;
+
+  &:hover {
+    background: #333;
+    a {
+      color: #fff;
+    }
+  } */
 
   h1, h2, h3, h4 {
     margin: 0rem;

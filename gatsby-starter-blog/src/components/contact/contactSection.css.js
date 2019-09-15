@@ -18,8 +18,8 @@ export const CenteredContent = styled.div`
   }
   @media screen and (max-width: 764px) {
     width: auto;
+    max-width: 80%;
   }
-
 `
 
 export const FormContainer = styled.div`

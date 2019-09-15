@@ -15,9 +15,7 @@ const Nav = () => {
       }
     }
   `)
-
   const { navMenu, author } = data.site.siteMetadata
-  
   return (
     <StyledNav>
       <NavBranding>
@@ -30,15 +28,26 @@ const Nav = () => {
       
       <Scrollspy items={['about', 'work', 'contact']} 
         currentClassName="active-link"
+        className="main-nav"
         >
-          {navMenu.map((item) => {
-              return ( <li key={item}>
-                <a href={(item === 'blog') ? '/blog' : '#' + item}>
-                  {item.toUpperCase()}
-                </a>
-              </li> )
-            })}
+        {navMenu.map((item) => {
+            return ( <li key={item}>
+              <a href={(item === 'blog') ? '/blog' : '#' + item}>
+                {item.toUpperCase()}
+              </a>
+            </li> )
+          })}
       </Scrollspy>
+      <div className="burger">&#9776;</div>
+      <ul className="burger-nav">
+          {navMenu.map((item) => {
+            return ( <li className="mobile-nav-link" key={item}>
+              <a href={(item === 'blog') ? '/blog' : '#' + item}>
+                {item.toUpperCase()}
+              </a>
+            </li> )
+          })}
+      </ul>
     </StyledNav>
       
   )

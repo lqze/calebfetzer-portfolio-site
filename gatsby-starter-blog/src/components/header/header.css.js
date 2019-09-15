@@ -32,6 +32,6 @@ export const StyledHeader = styled.header`
   &:hover {
     top: 0 !important;
   }
-  
 `;
+
 

@@ -28,7 +28,7 @@ const Nav = () => {
         </h4>
       </NavBranding>
       
-      <Scrollspy items={['work', 'about', 'contact']} 
+      <Scrollspy items={['about', 'work', 'contact']} 
         currentClassName="active-link"
         >
           {navMenu.map((item) => {

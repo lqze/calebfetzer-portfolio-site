@@ -6,7 +6,7 @@ import { CenteredContent, FormButton, FormContainer } from "./contactSection.css
 
 function showFlash() {
   let flashMsg = document.querySelector('.flash-success');
-  flashMsg.style.display = 'block';
+  flashMsg.style.visibility = 'visible';
 }
 
 const ContactSection = (props) => {
@@ -21,22 +21,23 @@ const ContactSection = (props) => {
       <CenteredContent>
         <h1>Let's work together!</h1>
         <FormContainer>
-          <form action="" method="POST">
+          <form name="Contact Form" action="" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="Contact Form" />
             <div>
               <label htmlFor='name'>Name</label>
-              <input type='text' id='name' name='contact_name' placeholder="Dr. Cool" required />
+              <input type='text' id='name' name='contact_name' placeholder="" required />
             </div>
             <div>
               <label htmlFor='email'>Email</label>
-              <input type='email' id='email' name='contact_email' placeholder="john.smith@gmail.com" required />
+              <input type='email' id='email' name='email' placeholder="" required />
             </div>
             <div>
               <label htmlFor='subject'>Subject</label>
-              <input type='text' id='subject' name='contact_subject' defaultValue="I'd like a fantastic website!" />
+              <input type='text' id='subject' name='subject' defaultValue="I'd like a fantastic website!" />
             </div>
             <div>
               <label htmlFor='message'>Message</label>
-              <textarea id='message' name='contact_message' ></textarea>
+              <textarea id='message' name='message' ></textarea>
             </div>
             <div className='button__wrapper'>
               <FormButton type="submit" method="POST" data-netlify="true" onClick={showFlash}>SEND</FormButton>

@@ -20,9 +20,16 @@ export const Title = styled.div `
     font-size: 4.5rem;
     color: inherit;
   }
-
   .hero__p_span {
     color: ${props => props.color ? props.color : 'inherit'};
+  }
+  @media screen and (max-width: 764px) {
+    h1 {
+      margin-top: 0;
+      font-size: 3.5rem;
+    }
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 `;
 
@@ -66,6 +73,9 @@ export const Copy = styled.div`
         }
       }
     }
+    @media screen and (max-width: 764px) {
+      font-size: 2.2rem;
+    }
   }
 `;
 
@@ -76,6 +86,7 @@ export const LeftHalf = styled.div `
   flex-basis: 100%;
   flex: 1;
   color: inherit;
+
 `;
 
 

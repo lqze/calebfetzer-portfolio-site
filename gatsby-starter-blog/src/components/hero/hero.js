@@ -20,10 +20,10 @@ function copyTextMarkup() {
       I specialise in JavaScript, particularly Node.js, and also have a keen insight on business development.
     </p>
     <p>
-      For any kind of enquiry, please feel free to email me at 
-      <a class="half-link-highlight email-link" href="mailto:caleb.fetzer@gmail.com?subject='Website Enquiry'">caleb.fetzer@gmail.com</a> 
-      or write me <a class="half-link-highlight" href="#contact">below</a>
+      I am actively looking for projects to undertake, so if you need someone who can provide you with excellent work and service, look no further.
     </p>
+    <p>For any kind of enquiry, please feel free to email me at 
+    <a class="half-link-highlight email-link" href="mailto:caleb.fetzer@gmail.com?subject='Website Enquiry'">caleb.fetzer@gmail.com</a>.<br/></p>
     <p>And feel free to take a look at my <a href="#work">work</a>!</p>
   `}
 }

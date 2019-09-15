@@ -42,14 +42,41 @@ h4 {
   font-size: 1.8rem;
   line-height: 2rem;
 }
+@media screen and (max-width: 764px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+    line-height: 4rem;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+  
+  h4 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  header {
+    font-size: 1.5rem;
+  }
+  
+}
 
 header {
   font-size: 2rem;
 }
+
 article {
   padding-left: 20%;
   padding-right: 20%;
-  @media screen (max-width: 764px) {
+  @media screen and (max-width: 764px) {
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -69,6 +96,10 @@ a:hover {
 
 section, div {
   transition: ease-in-out 0.2s;
+}
+
+footer {
+  text-align: center;
 }
 
 

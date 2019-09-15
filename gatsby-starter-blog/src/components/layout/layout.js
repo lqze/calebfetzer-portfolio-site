@@ -2,6 +2,7 @@ import React from "react"
 
 import Header from "../header/header"
 import Nav from "../header/nav/nav"
+import SEO from "../seo"
 
 class Layout extends React.Component {
   
@@ -9,6 +10,7 @@ class Layout extends React.Component {
     const { children } = this.props
     return (
       <div>
+        <SEO title={"Caleb Fetzer - My Website"}></SEO>
         <Header className="navigation">
           <Nav />
         </Header>
@@ -16,9 +18,7 @@ class Layout extends React.Component {
           {children} 
         </main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()} - Caleb Fetzer
         </footer>
       </div>
     )

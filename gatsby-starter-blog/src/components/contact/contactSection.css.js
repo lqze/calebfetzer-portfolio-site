@@ -11,9 +11,15 @@ export const CenteredContent = styled.div`
     text-align: center;
   }
   div.flash-success {
-    display: none;
-    transition: ease-in 0.2s;
+    background: inherit;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.3s ease-in-out 0.2s;
+    opacity: 0;
   }
+  @media screen and (max-width: 764px) {
+    width: auto;
+  }
+
 `
 
 export const FormContainer = styled.div`
@@ -49,6 +55,10 @@ export const FormContainer = styled.div`
   .button__wrapper {
     flex-grow: 0;
     width: 20%;
+    @media screen and (max-width: 764px) {
+      margin-top: 2rem;
+      width: 140px;
+    } 
   }
 `
 

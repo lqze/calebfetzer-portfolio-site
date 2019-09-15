@@ -9,8 +9,8 @@ module.exports = {
         and offer consulting to small businesses.`,
     siteUrl: `https://calebfetzer.me`,
     navMenu: [
-      `work`,
       `about`,
+      `work`,
       `contact`,
       // `blog`,
     ],

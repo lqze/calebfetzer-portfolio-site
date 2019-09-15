@@ -67,7 +67,7 @@ class Index extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-
+    smoothscroll.polyfill();
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <ScrollingColorBackground
@@ -89,38 +89,25 @@ class Index extends React.Component {
               </h1>
               <h3>Developer</h3>
             </div>
-            <ScrollDownButton nextSection={'#hero'} />
+            <ScrollDownButton nextSection={'#about'} />
           </ContentWrapper>
         </Section>
-        
         <Section
           data-background-color="rgb(255,251,238)"
           className="js-color-stop"
           height={'100vh'}
         >
-          <Hero name={`heroSection`} id={`hero`} />
+          <Hero name={`aboutSection`} id={`about`} />
           <ScrollDownButton nextSection={'#work'} />
         </Section>
-
         <WorkSection
           name={`workSection`}
           id={`work`}
           data-background-color="rgb(254, 235, 217)"
           className="js-color-stop"
         >
-        <ScrollDownButton nextSection={'#about'} />
-        </WorkSection>
-
-        <AboutSection
-          name={`aboutSection`}
-          id={`about`}
-          data-background-color="rgb(255, 247, 218)"
-          className="js-color-stop"
-        >
-        {/* <SkillsBanner /> */}
         <ScrollDownButton nextSection={'#contact'} />
-        </AboutSection>
-
+        </WorkSection>
         <ContactSection 
           name={`contactSection`}
           id={`contact`}

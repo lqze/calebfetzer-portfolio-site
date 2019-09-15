@@ -34,7 +34,7 @@ export const RightHalf = styled.div`
 
   
   @media screen and (max-width: 726px) {
-    display: none;
+    display: ${props => props.displayOption ? props.displayOption : "none"};
   }
 `;
 

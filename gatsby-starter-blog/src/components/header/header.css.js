@@ -29,8 +29,14 @@ export const StyledHeader = styled.header`
     margin-top: 6.5%;
   }
 
-  &:hover {
-    top: 0 !important;
+  @media only screen and (min-width : 1224px) {
+    &:hover {
+      background-color: rgba(249, 249, 249, 1);
+      transition: ease-in-out 0.3s;
+    }
+    &:hover {
+      top: 0 !important;
+    } 
   }
 `;
 

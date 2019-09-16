@@ -29,11 +29,7 @@ export const StyledNav = styled.nav`
   .active-link {
     color: rgba(55, 133, 228, 0.8);
   }
-
-  &:hover {
-    background-color: rgba(249, 249, 249, 0.7);
-    transition: ease-in-out 0.3s;
-  }
+  
   @media screen and (max-width: 686px) {
     margin: 0 2rem;
     margin-top: 1rem;

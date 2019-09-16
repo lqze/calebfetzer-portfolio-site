@@ -20,6 +20,11 @@ export const CenteredContent = styled.div`
     width: auto;
     max-width: 80%;
   }
+  @media screen and (max-width: 764px) and (max-height: 690px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
 `
 
 export const FormContainer = styled.div`
@@ -59,6 +64,9 @@ export const FormContainer = styled.div`
       margin-top: 2rem;
       width: 140px;
     } 
+  }
+  @media screen and (max-width: 764px) and (max-height: 690px) {
+    font-size: 2rem;
   }
 `
 

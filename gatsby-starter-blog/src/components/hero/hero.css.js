@@ -31,6 +31,9 @@ export const Title = styled.div `
     margin-left: 2rem;
     margin-right: 2rem;
   }
+  @media screen and (max-width: 764px) and (max-height: 690px) {
+    top: 38%;
+  }
 `;
 
 export const Copy = styled.div`
@@ -75,6 +78,9 @@ export const Copy = styled.div`
     }
     @media screen and (max-width: 764px) {
       font-size: 2.2rem;
+    }
+    @media screen and (max-width: 764px) and (max-height: 690px) {
+      font-size: 1.8rem;
     }
   }
 `;

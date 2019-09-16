@@ -4,6 +4,11 @@ import Scrollspy from "react-scrollspy"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { StyledNav, NavBranding } from './nav.css';
 
+function toggleMobileNav() {
+  let mobNav = document.querySelector('.burger-nav');
+  mobNav.classList.toggle('hidden');
+}
+
 const Nav = () => {
   const data = useStaticQuery(graphql`
     query NavQuery {
@@ -38,10 +43,10 @@ const Nav = () => {
             </li> )
           })}
       </Scrollspy>
-      <div className="burger">&#9776;</div>
-      <ul className="burger-nav">
+      <div className="burger"  onClick={toggleMobileNav}>&#9776;</div>
+      <ul className="burger-nav hidden">
           {navMenu.map((item) => {
-            return ( <li className="mobile-nav-link" key={item}>
+            return ( <li className="mobile-nav-link" onClick={toggleMobileNav} key={item}>
               <a href={(item === 'blog') ? '/blog' : '#' + item}>
                 {item.toUpperCase()}
               </a>

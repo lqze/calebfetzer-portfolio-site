@@ -16,7 +16,8 @@ export const StyledNav = styled.nav`
     margin-left: 4rem;
     font-weight: 700;
   }
-  ul.burger-nav, div.burger {
+
+  div.burger {
     display: none;
   }
   li {
@@ -47,18 +48,22 @@ export const StyledNav = styled.nav`
       /* margin-right: 4rem; */
     }
     .burger-nav {
-      display: inline-flex;
       position: fixed;
       right: 0;
       top: 25px;
-      border: 3px solid #333;
       background-color: #fff;
       flex-direction: column;
       text-align: center;
-      width: 150px;
+      width: 100%;
+      margin: 0;
+      margin-top: 2rem;
       li {
         margin: 1rem; 
       }
+
+    }
+    .active-nav {
+      display: inline-flex;
     }
   }
 `;

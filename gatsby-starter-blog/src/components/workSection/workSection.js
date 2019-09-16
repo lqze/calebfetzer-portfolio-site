@@ -40,6 +40,11 @@ const WorkSection = (props) => (
         <LeftHalf backgroundColor='monokai' style={
           {justifyContent: 'center'}
         }>
+          <div class="mobile-content-container">
+          <h2 class="mobile-header">Warrantly</h2>
+            <p>Full stack returns authorisation software, written in Express.js, MongoDB, HTML and CSS</p>
+          </div>
+        
           <ImgContainer>
             <a href="https://warrantly.com.au" target="about_blank">
             <Image fluid={imageData} />

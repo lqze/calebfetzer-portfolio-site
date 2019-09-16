@@ -12,8 +12,10 @@ export const ImgContainer = styled.div`
   }
 `;
 
-export const MobileContent = styled.div`
+export const MobileContentContainer = styled.div`
+  display: none;
   @media screen and (max-width: 768px) and (max-height: 690px) {
+    display: block;
     h1,h2,h3 {
       margin-bottom: 0.5rem;
     }

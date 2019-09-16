@@ -5,7 +5,7 @@ import Image from "gatsby-image"
 import Section from "../section/section"
 import { LeftHalf, RightHalf } from '../section/section.css'
 
-import { ImgContainer } from './work/work.css'
+import { ImgContainer, MobileContentContainer } from './work/work.css'
 
 const WorkSection = (props) => (
   <StaticQuery
@@ -40,11 +40,10 @@ const WorkSection = (props) => (
         <LeftHalf backgroundColor='monokai' style={
           {justifyContent: 'center'}
         }>
-          <div class="mobile-content-container">
-          <h2 class="mobile-header">Warrantly</h2>
+          <MobileContentContainer>
+          <h2 class="mobile-header">Warrantly.com.au</h2>
             <p>Full stack returns authorisation software, written in Express.js, MongoDB, HTML and CSS</p>
-          </div>
-        
+          </MobileContentContainer>        
           <ImgContainer>
             <a href="https://warrantly.com.au" target="about_blank">
             <Image fluid={imageData} />

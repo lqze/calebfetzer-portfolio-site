@@ -19,9 +19,9 @@ const WorkSection = (props) => (
             }
           }
         }
-        desktop: file(relativePath: { eq: "smartmock_ups.png" }) {
+        desktop: file(relativePath: { eq: "smartmock_ups-min.png" }) {
           childImageSharp {
-            fluid(quality: 100) {
+            fluid(quality: 90) {
               ...GatsbyImageSharpFluid_noBase64
             }
           }
@@ -41,11 +41,11 @@ const WorkSection = (props) => (
           {justifyContent: 'center'}
         }>
           <MobileContentContainer>
-          <h2 class="mobile-header">Warrantly.com.au</h2>
+            <h2 class="mobile-header">Warrantly.com.au</h2>
             <p>Full stack returns authorisation software, written in Express.js, MongoDB, HTML and CSS</p>
           </MobileContentContainer>        
           <ImgContainer>
-            <a href="https://warrantly.com.au" target="about_blank">
+            <a href="https://warrantly.com.au" target="about_blank" aria-label="Link to Warrantly Website">
             <Image fluid={imageData} />
             </a>
           </ImgContainer>

@@ -21,7 +21,7 @@ export const Title = styled.div `
     color: inherit;
   }
   .hero__p_span {
-    color: ${props => props.color ? props.color : 'inherit'};
+    color: rgb(223, 122, 42);
   }
   @media screen and (max-width: 764px) {
     h1 {

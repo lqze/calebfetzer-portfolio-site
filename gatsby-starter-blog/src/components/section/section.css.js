@@ -54,7 +54,7 @@ export const ContentWrapper = styled.div`
     overflow: hidden;
     position: relative;
     padding: 1.7rem 3rem;
-    border: .6rem solid #444;
+    border: .6rem solid #38b6ff;
     
     h1, h3 {
       margin: 0;

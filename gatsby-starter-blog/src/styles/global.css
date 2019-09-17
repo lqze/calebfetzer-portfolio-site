@@ -90,7 +90,7 @@ a {
 }
 
 a:hover {
-  color: rgba(55, 133, 228, 0.8);
+  color: #38b6ff;
   transition: ease-in-out 0.2s;
 }
 

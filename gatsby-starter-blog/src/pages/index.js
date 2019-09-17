@@ -2,21 +2,16 @@
 
 import React from "react"
 import { Link, graphql } from "gatsby"
-import styled from "styled-components"
 import * as smoothscroll from 'smoothscroll-polyfill'
 
 
 
-import Bio from "../components/bio"
 import Layout from "../components/layout/layout"
 import Hero from "../components/hero/hero"
-import SEO from "../components/seo"
 import ScrollingColorBackground from "react-scrolling-color-background"
 
 // Import sections to be displayed
 import WorkSection from "../components/workSection/workSection"
-import AboutSection from "../components/aboutSection/aboutSection"
-import SkillsBanner from "../components/skillsBanner/skillsBanner"
 import ContactSection from '../components/contact/contactSection'
 // generic section component
 import Section from "../components/section/section"
@@ -77,16 +72,16 @@ class Index extends React.Component {
         />
         
         <Section
-          data-background-color="rgb(255, 248, 221)"
+          data-background-color="rgb(217,217,217)"
           className="js-color-stop"
           height={'100vh'}
         >
           <ContentWrapper>
             <div>
               <h1>
-                Caleb Fetzer
+                CALEB FETZER
               </h1>
-              <h3>Developer</h3>
+              <h3 style={{fontWeight: 300,}}>FULL-STACK DEVELOPER</h3>
             </div>
             <ScrollDownButton nextSection={'#about'} />
           </ContentWrapper>

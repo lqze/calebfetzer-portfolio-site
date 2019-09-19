@@ -2,9 +2,9 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout/layout"
 import Header from "../components/header/header"
 import SEO from "../components/seo"
+import { StyledNavBlogPost, BlogContent, ArticleFlexContainer, BlogPostWrapper } from "../components/blog/blogList.css"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -13,36 +13,33 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <div>
-
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
-        <article>
-          <Header location={this.props.location} className="blog-post">
-            <h1
-                style={{
-                  marginBottom: 0,
-                }}
-              >
+      <BlogPostWrapper>
+        <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
+          
+          <BlogContent style={{marginTop: `2rem`,}}>
+            <StyledNavBlogPost>
+              <h4>
+                <Link to='/'>
+                  CALEBFETZER.ME
+                </Link>
+              </h4>
+            </StyledNavBlogPost>
+            <Header location={this.props.location}>
+              <h1 style={{marginBottom: 0}}>
                 {post.frontmatter.title}
               </h1>
-              <p
-                style={{
-                  display: `block`,
-                }}
-              >
+              <p style={{display: `block`}}>
                 {post.frontmatter.date}
               </p>
-          </Header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
-          />
+            </Header>
+              <ArticleFlexContainer>
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              </ArticleFlexContainer>
+            </BlogContent>
+          <hr />
           <footer>
             <Bio />
           </footer>
-        </article>
         <nav>
           <ul
             style={{
@@ -69,8 +66,7 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </nav>
-        </div>
-
+      </BlogPostWrapper>
     )
   }
 }

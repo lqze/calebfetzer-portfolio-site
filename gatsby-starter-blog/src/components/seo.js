@@ -61,7 +61,9 @@ function SEO({ description, lang, meta, title }) {
         { rel: 'icon', type: 'image/png', sizes: "32x32", href: `${favicon32}` },
         { rel: 'shortcut icon', type: 'image/x-icon', href: `${faviconICO}` },
       ]}
-    />
+    >
+      <link prefetch data-prefetch></link>
+    </Helmet>
   )
 }
 

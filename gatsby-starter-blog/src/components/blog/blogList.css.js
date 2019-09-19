@@ -4,6 +4,7 @@ export const StyledNav = styled.nav`
   position: fixed;
   top: 2rem;
   margin-bottom: 2rem;
+  margin-left: 1rem;
 `;
 
 export const BlogContent = styled.div`
@@ -30,7 +31,7 @@ export const ArticleFlexContainer = styled.div`
 
 export const DateContainer = styled.div`
   flex: 1;
-  max-width: 120px;
+  max-width: 100px;
   text-align: right;
   align-self: baseline;
   margin-right: 1rem;
@@ -70,8 +71,19 @@ export const ArticleExcerpt = styled.p`
 `
 
 export const BlogBio = styled.div`
-  margin-bottom: 5rem;
   text-align: left;
   display: flex;
   flex-direction: column;
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+`;
+
+export const BlogPostWrapper = styled.div`
+  margin: 0 auto;
+  margin-top: 3rem;
+  max-width: 960px;
+`;
+
+export const StyledNavBlogPost = styled.nav`
+  margin-bottom: 2rem;
 `;

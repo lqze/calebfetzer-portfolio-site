@@ -77,7 +77,7 @@ class Index extends React.Component {
           height={'100vh'}
         >
           <ContentWrapper>
-            <div>
+            <div className="hero-border">
               <h1>
                 CALEB FETZER
               </h1>

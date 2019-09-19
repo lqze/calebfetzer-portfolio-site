@@ -50,7 +50,7 @@ export const ContentWrapper = styled.div`
   align-content: center;
   text-align: center;
   margin: 0 auto;
-  div {
+  .hero-border {
     overflow: hidden;
     position: relative;
     padding: 1.7rem 3rem;

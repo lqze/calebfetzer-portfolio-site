@@ -74,8 +74,6 @@ header {
 }
 
 article {
-  padding-left: 20%;
-  padding-right: 20%;
   @media screen and (max-width: 764px) {
     padding-left: 10%;
     padding-right: 10%;
@@ -131,3 +129,7 @@ footer {
   height: 2px;
 }
 /* END PACE CSS */
+
+.no-gutter {
+  margin-bottom: 0;
+}

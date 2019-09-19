@@ -37,7 +37,7 @@ const Nav = () => {
         >
         {navMenu.map((item) => {
             return ( <li key={item}>
-              <a href={(item === 'blog') ? '/blog' : '#' + item}>
+              <a href={(item === 'blog') ? '/blog' : '/#' + item}>
                 {item.toUpperCase()}
               </a>
             </li> )
@@ -47,7 +47,7 @@ const Nav = () => {
       <ul className="burger-nav hidden">
           {navMenu.map((item) => {
             return ( <li className="mobile-nav-link" onClick={toggleMobileNav} key={item}>
-              <a href={(item === 'blog') ? '/blog' : '#' + item}>
+              <a href={(item === 'blog') ? '/blog' : '/#' + item}>
                 {item.toUpperCase()}
               </a>
             </li> )

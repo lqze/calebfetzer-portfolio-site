@@ -13,7 +13,8 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <div>
+
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -42,7 +43,6 @@ class BlogPostTemplate extends React.Component {
             <Bio />
           </footer>
         </article>
-
         <nav>
           <ul
             style={{
@@ -69,7 +69,8 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </nav>
-      </Layout>
+        </div>
+
     )
   }
 }

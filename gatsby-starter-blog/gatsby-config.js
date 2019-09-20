@@ -121,7 +121,7 @@ module.exports = {
                 global: false,
               },
             },
-          }
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],

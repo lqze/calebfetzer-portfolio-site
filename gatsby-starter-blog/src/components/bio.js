@@ -24,7 +24,7 @@ const Bio = () => {
   return (
     <div style={{ display: `flex` }}>
       <p>
-        Written by <strong>{author}</strong>.
+        Written by <a href="/"><strong>{author}</strong></a>.
         {/* Only edit authorBio in siteMetadata to prevent issues with formatting */}
         {' ' + authorBio}
       </p>

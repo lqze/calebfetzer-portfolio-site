@@ -43,24 +43,23 @@ h4 {
   line-height: 2rem;
 }
 @media screen and (max-width: 764px) {
+  h1,h2,h3,h4,h5,h6 {
+    line-height: normal;
+  }
   h1 {
     font-size: 3rem;
-    line-height: 4rem;
   }
   
   h2 {
     font-size: 2.4rem;
-    line-height: 4rem;
   }
   
   h3 {
     font-size: 1.8rem;
-    line-height: 4rem;
   }
   
   h4 {
     font-size: 1.4rem;
-    line-height: 2rem;
   }
 
   header {
@@ -132,4 +131,11 @@ footer {
 
 .no-gutter {
   margin-bottom: 0;
+}
+
+/* Markdown */
+blockquote {
+  border-radius: 8px;
+  padding: 1rem 1rem;
+  background-color: wheat;
 }

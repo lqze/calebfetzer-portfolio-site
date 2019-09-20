@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Header from "../components/header/header"
 import SEO from "../components/seo"
-import { StyledNavBlogPost, BlogContent, ArticleFlexContainer, BlogPostWrapper } from "../components/blog/blogList.css"
+import { StyledNavBlogPost, BlogContent, ArticleFlexContainer, BlogPostWrapper, StyledList } from "../components/blog/blogList.css"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,16 +14,26 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <BlogPostWrapper>
-        <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
-          
-          <BlogContent style={{marginTop: `2rem`,}}>
-            <StyledNavBlogPost>
-              <h4>
-                <Link to='/'>
-                  CALEBFETZER.ME
-                </Link>
-              </h4>
+        <StyledNavBlogPost>
+              <StyledList>
+                <li>
+                  <Link to='/'>
+                    {siteTitle}
+                  </Link>
+                </li>
+                <li>
+                  /
+                </li>                  
+                <li>
+                  <Link to='/blog'>
+                    Blog
+                  </Link>
+                </li>
+              </StyledList>
             </StyledNavBlogPost>
+        <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
+          <BlogContent style={{marginTop: `2rem`,}}>
+            
             <Header location={this.props.location}>
               <h1 style={{marginBottom: 0}}>
                 {post.frontmatter.title}

@@ -18,8 +18,11 @@ import {
   ListingContainer,
   ArticleTitle,
   ArticleExcerpt,
-  BlogBio
+  BlogBioWrapper,
+  BlogBioCopy,
+  BioImageWrapper,
 } from "../components/blog/blogList.css"
+import Bio from "../components/bio"
 
 
 
@@ -37,6 +40,7 @@ const DisplayPostsComponent = props => {
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
+                <span className='mobile-date'>{node.frontmatter.date}</span>
               </ArticleTitle>
               <ArticleExcerpt dangerouslySetInnerHTML={{
                 __html: node.frontmatter.description || node.excerpt,
@@ -51,6 +55,8 @@ const DisplayPostsComponent = props => {
 export const StyledSection = styled(Section)`
   margin-right: 15%;
   margin-left: 4rem;
+  width: auto !important;
+  align-content: center;
 `;
 
 
@@ -69,10 +75,15 @@ class Blog extends React.Component {
         </h4>
       </StyledNav>
         <ContentWrapper>
-          <BlogBio>
-            <h2 className="no-gutter">Hi 👋! Welcome to my Blog.</h2>
-            <p>I'll try to post as often as I can.</p>
-          </BlogBio>
+          <BlogBioWrapper>
+            <BlogBioCopy>
+              <h2 className="no-gutter">Hello 👋! Welcome to my blog</h2>
+              <p>I like to write about tech, life, business development and language learning.</p>
+            </BlogBioCopy>
+            <BioImageWrapper>
+              
+            </BioImageWrapper>
+          </BlogBioWrapper>
           <BlogContent>
             <DisplayPostsComponent posts={posts}/>
           </BlogContent>

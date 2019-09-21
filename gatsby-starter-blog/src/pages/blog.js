@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 import styled from "styled-components"
 
 import Layout from "../components/layout/layout"
@@ -55,11 +56,14 @@ const DisplayPostsComponent = props => {
 export const StyledSection = styled(Section)`
   margin-right: 15%;
   margin-left: 4rem;
-  width: auto !important;
+  width: auto;
   align-content: center;
-  @media screen and (max-width: 760px) {
-    height: auto;
-  }
+  height: auto;
+`;
+
+export const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 
@@ -69,29 +73,28 @@ class Blog extends React.Component {
     const { data } = this.props;
     const posts = data.allMarkdownRemark.edges;
     return (
-    <StyledSection>
-      <StyledNav>
-        <h4>
-          <Link to='/'>
-            CALEBFETZER.ME
-          </Link>
-        </h4>
-      </StyledNav>
-        <ContentWrapper>
-          <BlogBioWrapper>
-            <BlogBioCopy>
-              <h2 className="no-gutter">Hello 👋! Welcome to my blog</h2>
-              <p>I like to write about tech, life, business development and language learning.</p>
-            </BlogBioCopy>
-            <BioImageWrapper>
-              
-            </BioImageWrapper>
-          </BlogBioWrapper>
-          <BlogContent>
-            <DisplayPostsComponent posts={posts}/>
-          </BlogContent>
-        </ContentWrapper>
-      </StyledSection>
+      <StyledContainer>
+        <StyledSection>
+          <ContentWrapper>
+            <StyledNav>
+            <h4>
+              <Link to='/'>
+                CALEBFETZER.ME
+              </Link>
+            </h4>
+          </StyledNav>
+              <BlogBioWrapper>
+                <BlogBioCopy>
+                  <h2 className="no-gutter">Hello 👋! Welcome to my blog</h2>
+                  <p>I like to write about tech, life, business development and language learning.</p>
+                </BlogBioCopy>
+              </BlogBioWrapper>
+              <BlogContent>
+                <DisplayPostsComponent posts={posts}/>
+              </BlogContent>
+            </ContentWrapper>
+        </StyledSection>
+      </StyledContainer>
     )
   }
 }

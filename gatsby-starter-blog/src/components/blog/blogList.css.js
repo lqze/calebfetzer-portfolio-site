@@ -1,12 +1,14 @@
 import styled from "styled-components"
 
 export const StyledNav = styled.nav`
+  text-align: left;
   width: 100%;
   margin-bottom: 2rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   @media screen and (max-width: 760px) {
     margin-bottom: 1rem;
     margin-top: 3rem;
+    margin-left: 1rem;
   }
 `;
 

@@ -13,7 +13,7 @@ German was always difficult to grasp at the beginning for me, an English speaker
 
 > English is a Germanic language, so learning German as a LOTE should be a piece of cake.
 >
-> &mdash; Me, circa 2015, thinking so smart as I sipped an espresso at university.
+> &mdash; *Me, circa 2015, thinking so smart.*
 
 It took me *months* to grasp the basic concepts such as accusative, dative, genetive. The flexible sentence structure with that combined? Get out, please.
 
@@ -31,6 +31,8 @@ Clearly the translations must be identical..  no wait.. The postman bites the do
 
 > Der Hund beißt den Postmann.
 
+Now this sentence I can get around...it has the English word order and uses the different case articles that we've been studying about.
+
 I failed to see how the accusative represents the result of an action! This basic concept.. I just could not for the life of me grasp it.
 I remember distinctively reading over the sentence about 10-1000 times. It clicked eventually, about 3 weeks later.
 
@@ -39,3 +41,7 @@ Suddenly, the difficulties with the case system seemed entirely gone. What matte
 The key I learnt here, was to completely forget all notions of English word-order. Anecdotally I've often found that when people see a foreign language, their interpretation is that learning it would simply mean memorising the direct translation of a word, word-for-word. This would definitely help, but you fail to forget about things such as plural forms, declinations and verb conjugations.
 
 I had this same feeling. I thought it would be akin to looking up a dictionary, finding the german for some words: enjoyed, it, and I, then being able to say "I enjoyed it!" just like a native. Couldn't be mooooore wrong. Could not be more wronger.
+
+## Wrote learning vocabulary is inefficient
+
+If you want to simply just pass the exam, then by all means, study and memorise the word list you get given. You'll forget it in a day, or 4 or so hours after your test.

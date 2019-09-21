@@ -15,25 +15,24 @@ class BlogPostTemplate extends React.Component {
     return (
       <BlogPostWrapper>
         <StyledNavBlogPost>
-              <StyledList>
-                <li>
-                  <Link to='/'>
-                    {siteTitle}
-                  </Link>
-                </li>
-                <li>
-                  /
-                </li>                  
-                <li>
-                  <Link to='/blog'>
-                    Blog
-                  </Link>
-                </li>
-              </StyledList>
-            </StyledNavBlogPost>
+          <StyledList>
+            <li>
+              <Link to='/'>
+                {siteTitle}
+              </Link>
+            </li>
+            <li>
+              /
+            </li>                  
+            <li>
+              <Link to='/blog'>
+                Blog
+              </Link>
+            </li>
+          </StyledList>
+        </StyledNavBlogPost>
         <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
           <BlogContent style={{marginTop: `2rem`,}}>
-            
             <Header location={this.props.location}>
               <h1 style={{marginBottom: 0}}>
                 {post.frontmatter.title}
@@ -43,7 +42,7 @@ class BlogPostTemplate extends React.Component {
               </p>
             </Header>
               <ArticleFlexContainer>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <article dangerouslySetInnerHTML={{ __html: post.html }} />
               </ArticleFlexContainer>
             </BlogContent>
           <hr />
@@ -68,16 +67,26 @@ class BlogPostTemplate extends React.Component {
               )}
             </li>
             <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
+              <NextPost props={next} />
             </li>
           </ul>
         </nav>
       </BlogPostWrapper>
     )
+  }
+}
+
+function NextPost(props) {
+  console.log(props.props);
+  if (props.props.frontmatter.isPost) {
+    return (
+      <Link to={props.props.fields.slug} rel="next">
+        {props.props.frontmatter.title} →
+      </Link>
+    )
+  }
+  else {
+    return null;
   }
 }
 

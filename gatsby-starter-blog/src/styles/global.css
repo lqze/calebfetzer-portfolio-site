@@ -136,6 +136,7 @@ footer {
 /* Markdown */
 blockquote {
   border-radius: 8px;
-  padding: 1rem 1rem;
-  background-color: wheat;
+  padding: 1rem 2.5rem;
+  background-color: #fdf4e2;
+  color: hsl(40, 16.4%, 21.6%);
 }

@@ -32,20 +32,20 @@ const DisplayPostsComponent = props => {
       const title = node.frontmatter.title || node.fields.slug
       return (
         <ArticleFlexContainer key={node.fields.slug}>
-            <DateContainer>
-              <ArticleDate>{node.frontmatter.date}</ArticleDate>
-            </DateContainer>
-            <ListingContainer>
-              <ArticleTitle>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-                <span className='mobile-date'>{node.frontmatter.date}</span>
-              </ArticleTitle>
-              <ArticleExcerpt dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }} />
-            </ListingContainer>
+          <DateContainer>
+            <ArticleDate>{node.frontmatter.date}</ArticleDate>
+          </DateContainer>
+          <ListingContainer>
+            <ArticleTitle>
+              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                {title}
+              </Link>
+              <span className='mobile-date'>{node.frontmatter.date}</span>
+            </ArticleTitle>
+            <ArticleExcerpt dangerouslySetInnerHTML={{
+              __html: node.frontmatter.description || node.excerpt,
+            }} />
+          </ListingContainer>
         </ArticleFlexContainer>
       )}
     }
@@ -57,6 +57,9 @@ export const StyledSection = styled(Section)`
   margin-left: 4rem;
   width: auto !important;
   align-content: center;
+  @media screen and (max-width: 760px) {
+    height: auto;
+  }
 `;
 
 

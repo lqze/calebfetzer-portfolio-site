@@ -1,17 +1,21 @@
 import styled from "styled-components"
 
 export const StyledNav = styled.nav`
-  position: fixed;
-  top: 0;
+  width: 100%;
   margin-bottom: 2rem;
   margin-left: 1rem;
+  @media screen and (max-width: 760px) {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+  }
 `;
 
 export const BlogContent = styled.div`
-  text-align: left;
-  max-width: 860px;
+  width: 100%;
   header {
+    text-align: left;
     margin-bottom: 4rem;
+    border-bottom: 2px solid #333;
     p {
       margin: 1rem 0;
       color: #666;
@@ -40,6 +44,15 @@ export const ArticleFlexContainer = styled.div`
   margin-bottom: 2rem;
   @media screen and (max-width: 660px) {
     margin-bottom: 2.5rem;
+  }
+
+  article {
+    p {
+      font-size: 1.8rem;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      margin-bottom: 0;
+    }
   }
 `
 
@@ -111,16 +124,23 @@ export const BlogBioCopy = styled.div`
   flex-direction: column;
   margin-bottom: 5rem;
   margin-left: 1rem;
+  @media screen and (max-width: 760px) and (orientation: portrait) {
+    text-align: left;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 2.5rem;
+  }
 `;
 
 export const BioImageWrapper = styled.div`
 `;
 
 export const BlogPostWrapper = styled.div`
-  margin: 0 auto;
   margin-top: 3rem;
-  max-width: 960px;
-  @media screen and (max-width: 760px) and (orientation: portrait) {
+  max-width: 820px;
+  margin: 0 auto;
+  @media screen and (max-width: 840px) and (orientation: portrait) {
     margin-left: 2rem;
     margin-right: 2.5rem;
   }
@@ -136,7 +156,6 @@ export const StyledList = styled.ul`
   display: inline-flex;
   padding: 0;
   li {
-    margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
 `;

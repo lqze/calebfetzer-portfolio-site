@@ -11,7 +11,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-
+    console.log(this.props.pageContext)
     return (
       <BlogPostWrapper>
         <StyledNavBlogPost>
@@ -67,7 +67,9 @@ class BlogPostTemplate extends React.Component {
               )}
             </li>
             <li>
-              <NextPost props={next} />
+              {next && (
+                <NextPost props={next} />
+              )}
             </li>
           </ul>
         </nav>
@@ -77,15 +79,13 @@ class BlogPostTemplate extends React.Component {
 }
 
 function NextPost(props) {
-  console.log(props.props);
-  if (props.props.frontmatter.isPost) {
+  if (props.props.frontmatter.title.length > 1) {
     return (
       <Link to={props.props.fields.slug} rel="next">
         {props.props.frontmatter.title} →
       </Link>
     )
-  }
-  else {
+  } else {
     return null;
   }
 }
@@ -108,6 +108,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        isPost
       }
     }
   }

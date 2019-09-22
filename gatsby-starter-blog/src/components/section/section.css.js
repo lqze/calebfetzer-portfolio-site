@@ -11,6 +11,11 @@ export const StyledSection = styled.section`
     justify-content: center !important;
   }
   position: relative;
+  &.content-section {
+    @media screen and (max-width:860px) and (orientation: landscape) {
+      height: 100vw;
+    }
+  }
 `;
 
 

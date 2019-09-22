@@ -1,3 +1,5 @@
+
+
 html {
   font-size: 10px;
   scroll-behavior: smooth;
@@ -6,6 +8,7 @@ html {
 html,
 body {
   margin: 0 auto;
+  height: 100%;
 }
 body {
   font-family: "Source Sans Pro", Arial, sans-serif;

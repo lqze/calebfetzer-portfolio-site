@@ -16,4 +16,10 @@ export const StyledButton = styled.a`
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s;
     bottom: 5.1rem;
   }
+  @media screen and (max-width: 760px) {
+    display: none;
+  }
+  @media screen and (max-width: 760px) and (max-height: 640px) {
+    display: none;
+  }
 `;

@@ -1,7 +1,7 @@
 /* Single Page Layout for index page */
 
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import * as smoothscroll from 'smoothscroll-polyfill'
 
 
@@ -18,33 +18,6 @@ import Section from "../components/section/section"
 import { ContentWrapper }  from "../components/section/section.css"
 import ScrollDownButton from "../components/scrollDownButton/scrollDown"
 
-
-const DisplayPostsComponent = props => {
-  return props.posts.map(({node})  => { // eslint-disable-line
-    if (node.frontmatter.isPost === true) {
-      const title = node.frontmatter.title || node.fields.slug
-      return (
-        <article key={node.fields.slug}>
-          <header>
-            <h3>
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                {title}
-              </Link>
-            </h3>
-            <small>{node.frontmatter.date}</small>
-          </header>
-          <section>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }}
-            />
-          </section>
-        </article>
-      )
-    }
-  })
-}
 // ScrollingColorBackground Custom Style
 const customStyle = {
   position: "fixed",
@@ -61,7 +34,6 @@ class Index extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <ScrollingColorBackground
@@ -88,7 +60,7 @@ class Index extends React.Component {
         </Section>
         <Section
           data-background-color="rgb(255,251,238)"
-          className="js-color-stop"
+          className="js-color-stop content-section"
           height={'100vh'}
         >
           <Hero name={`aboutSection`} id={`about`} />
@@ -98,7 +70,7 @@ class Index extends React.Component {
           name={`workSection`}
           id={`work`}
           data-background-color="rgb(254, 235, 217)"
-          className="js-color-stop"
+          className="js-color-stop content-section"
         >
         <ScrollDownButton nextSection={'#contact'} />
         </WorkSection>
@@ -106,11 +78,8 @@ class Index extends React.Component {
           name={`contactSection`}
           id={`contact`}
           data-background-color="rgb(251, 215, 134)"
-          className="js-color-stop justify-center"
+          className="js-color-stop justify-center content-section"
         />
-        {/* <SEO title="All posts" />
-        <DisplayPostsComponent posts={posts} />
-        <Bio /> */}
       </Layout>
     )
   }
@@ -123,22 +92,6 @@ export const query = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            isPost
-          }
-        }
       }
     }
   }

@@ -117,6 +117,10 @@ export const BlogBioWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;
+  @media screen and (max-width: 760px) {
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
   margin-left: 1rem;
 `;
 
@@ -129,8 +133,8 @@ export const BlogBioCopy = styled.div`
   @media screen and (max-width: 760px) and (orientation: portrait) {
     text-align: left;
     margin-top: 3rem;
-    margin-bottom: 0;
-    margin-left: 0;
+    margin-bottom: 2rem;
+    /* margin-left: 0; */
     margin-right: 2.5rem;
   }
 `;
@@ -142,7 +146,11 @@ export const BlogPostWrapper = styled.div`
   margin-top: 3rem;
   max-width: 820px;
   margin: 0 auto;
-  @media screen and (max-width: 840px) and (orientation: portrait) {
+  @media screen and (max-width: 840px) {
+    margin-left: 2rem;
+    margin-right: 2.5rem;
+  }
+  @media screen and (max-width: 667px) and (orientation: landscape) {
     margin-left: 2rem;
     margin-right: 2.5rem;
   }

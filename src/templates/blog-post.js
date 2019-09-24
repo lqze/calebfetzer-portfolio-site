@@ -42,7 +42,7 @@ class BlogPostTemplate extends React.Component {
               </p>
             </Header>
               <ArticleFlexContainer>
-                <article dangerouslySetInnerHTML={{ __html: post.html }} />
+                <article style={{width: `100%`}} dangerouslySetInnerHTML={{ __html: post.html }} />
               </ArticleFlexContainer>
             </BlogContent>
           <hr />

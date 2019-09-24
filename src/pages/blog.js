@@ -1,9 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
 import styled from "styled-components"
 
-import Layout from "../components/layout/layout"
 // Import sections to be displayed
 // generic section component
 
@@ -13,7 +11,6 @@ import {
   StyledNav, 
   BlogContent, 
   ArticleDate, 
-  ArticleListing,
   ArticleFlexContainer,
   DateContainer,
   ListingContainer,
@@ -21,9 +18,7 @@ import {
   ArticleExcerpt,
   BlogBioWrapper,
   BlogBioCopy,
-  BioImageWrapper,
 } from "../components/blog/blogList.css"
-import Bio from "../components/bio"
 
 
 
@@ -85,7 +80,8 @@ class Blog extends React.Component {
           </StyledNav>
               <BlogBioWrapper>
                 <BlogBioCopy>
-                  <h2 className="no-gutter">Hello 👋! Welcome to my blog</h2>
+                  <h2 className="no-gutter">Hello <span role="img" aria-label="Wave">👋</span>! 
+                  Welcome to my blog</h2>
                   <p>I like to write about tech, life, business development and language learning.</p>
                 </BlogBioCopy>
               </BlogBioWrapper>

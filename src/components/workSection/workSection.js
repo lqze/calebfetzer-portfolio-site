@@ -41,7 +41,7 @@ const WorkSection = (props) => (
           {justifyContent: 'center'}
         }>
           <MobileContentContainer>
-            <h2 class="mobile-header">Warrantly.com.au</h2>
+            <h2 className="mobile-header">Warrantly.com.au</h2>
             <p>Full stack returns authorisation software, written in Express.js, MongoDB, HTML and CSS</p>
           </MobileContentContainer>        
           <ImgContainer>

@@ -92,6 +92,7 @@ You need a personal motivation to succeed. Do you have any friends that speak th
 Why did I choose German? I could have chosen French (I did do it for one semester, actually), Italian, Korean, Japanese, Mandarin, Indonesian... I simply chose German because I had to choose one! It wasn't until later I developed further motivations to continue.
 
 And what about Hungarian? My grandparents are Hungarian. They never spoke a word of it to me. No one in my family (except my grandmother) can speak it.
+
 I developed a passion from learning a foreign language. It completely changed my perspective. It allowed me to think differently and understand history, culture and the world better. I became more sociable, met new people, had more fun! I had only ever thought of STEM field subjects and that type of schooling, never endeavoured into humanities, and had terrible English grades throughout highschool.
 
 With this passion I decided I wanted to learn Hungarian. I want to know more about the land my father's family comes from. What is the language, how does it work, how can it be so different to English or German..
@@ -104,4 +105,4 @@ In 2018 I applied for Hungarian citizenship, and in 2019 I went over to Melbourn
 
 I felt like ranting and throwing a few thoughts out, but I hope some of the subject matter is a little helpful in your own struggles with learning a language. Like anything worth while in this world, it takes effort to get involved with it.
 
-Last bit of advice: just do one minute a day if you can. It's like flossing. You'll notice the difference in a year and you'll be amazed.
+Last bit of advice: just do one minute a day if you can. It's like flossing. You'll notice the difference in a year and you'll be amazed. 

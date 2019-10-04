@@ -1,6 +1,6 @@
 ---
 title: Struggles with Learning a Foreign Language
-date: "2019-11-20T08:23:03.284Z"
+date: "2019-09-20T08:23:03.284Z"
 isPost: true
 description: "Some of my personal struggles with learning a foreign language."
 ---
